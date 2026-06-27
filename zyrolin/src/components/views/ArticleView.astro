@@ -12,6 +12,8 @@ import StatRow from '../article/StatRow.astro';
 import BarChart from '../article/BarChart.astro';
 import { categoryIcon } from '../../data/categories';
 import { localizedCategory } from '../../i18n/categories';
+import { SITE } from '../../data/site';
+import { categoryCoverUrl } from '../../data/covers';
 import {
   articleSlug,
   readingTime,
@@ -34,7 +36,100 @@ const icon = categoryIcon(article.data.category);
 const { Content, headings } = await render(article);
 const minutes = readingTime(article);
 const related = await getRelatedArticles(article);
+
+// Article structured data (JSON-LD) for richer search results.
+const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
+const imageUrl = categoryCoverUrl(article.data.category, articleSlug(article), 1200);
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: article.data.title,
+  description: article.data.description,
+  datePublished: article.data.pubDate.toISOString(),
+  dateModified: (article.data.updatedDate ?? article.data.pubDate).toISOString(),
+  author: { '@type': 'Organization', name: article.data.author },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/favicon.svg', Astro.site ?? SITE.url).toString(),
+    },
+  },
+  ...(imageUrl ? { image: imageUrl } : {}),
+  mainEntityOfPage: canonical,
+  inLanguage: lang,
+};
+
+// FAQPage structured data, parsed from the article's "## FAQ" section.
+// FAQ items are written as **Question?** followed by the answer paragraph.
+const FAQ_HEADINGS = [
+  'faq',
+  'preguntas frecuentes',
+  'häufige fragen',
+  'questions fréquentes',
+];
+function extractFaq(md: string): { q: string; a: string }[] {
+  const lines = md.split('\n');
+  let start = -1;
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/^##\s+(.+?)\s*$/);
+    if (m && FAQ_HEADINGS.includes(m[1].trim().toLowerCase())) {
+      start = i + 1;
+      break;
+    }
+  }
+  if (start === -1) return [];
+  const out: { q: string; a: string }[] = [];
+  let q: string | null = null;
+  let a: string[] = [];
+  const flush = () => {
+    if (q && a.join(' ').trim()) out.push({ q, a: a.join(' ').trim() });
+  };
+  for (let i = start; i < lines.length; i++) {
+    const line = lines[i];
+    if (/^##\s+/.test(line)) break;
+    const qm = line.match(/^\*\*(.+?)\*\*\s*$/);
+    if (qm) {
+      flush();
+      q = qm[1].trim();
+      a = [];
+    } else if (q && line.trim()) {
+      a.push(line.trim());
+    }
+  }
+  flush();
+  return out;
+}
+const faqItems = extractFaq(article.body ?? '');
+const faqJsonLd =
+  faqItems.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqItems.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }
+    : null;
 ---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(articleJsonLd)}
+  is:inline
+/>
+{
+  faqJsonLd && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(faqJsonLd)}
+      is:inline
+    />
+  )
+}
 
 <!-- Reading progress bar -->
 <div
