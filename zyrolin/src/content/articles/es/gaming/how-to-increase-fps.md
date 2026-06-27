@@ -7,6 +7,21 @@ pubDate: 2026-06-19
 author: "Equipo Zyrolin"
 featured: true
 tags: ["fps", "gaming", "rendimiento", "pubg"]
+keyTakeaways:
+  - "Actualizar los controladores de la GPU suele dar un aumento de FPS al instante."
+  - "Las sombras y el antialiasing son los mayores asesinos de FPS."
+  - "Desactiva el V-Sync para reducir el input lag y mantén el PC fresco."
+stats:
+  - { value: "Bajas", label: "Mejor ajuste de sombras" }
+  - { value: "Off", label: "V-Sync para el input lag" }
+  - { value: "4", label: "Cambios con mayor impacto" }
+chart:
+  title: "Impacto en FPS de ajustes comunes (relativo)"
+  data:
+    - { label: "Sombras", value: 35 }
+    - { label: "Antialiasing", value: 20 }
+    - { label: "Distancia de visión", value: 15 }
+    - { label: "Texturas", value: 10 }
 ---
 
 Pocos FPS hacen que los juegos vayan a tirones y empeoran tu puntería. Estos pasos suben los fotogramas en la mayoría de PCs, desde equipos básicos hasta gama alta.

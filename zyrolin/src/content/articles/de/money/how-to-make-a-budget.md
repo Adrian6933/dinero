@@ -7,6 +7,21 @@ pubDate: 2026-06-22
 author: "Zyrolin-Team"
 featured: true
 tags: ["budget", "sparen", "finanzen"]
+keyTakeaways:
+  - "Die 50/30/20-Regel teilt dein Einkommen in Bedürfnisse, Wünsche und Sparen."
+  - "Verfolge zwei Wochen lang deine Ausgaben, bevor du das Budget erstellst."
+  - "Prüfe wöchentlich – kleine Korrekturen schlagen monatliche Überraschungen."
+stats:
+  - { value: "50 %", label: "Bedürfnisse" }
+  - { value: "30 %", label: "Wünsche" }
+  - { value: "20 %", label: "Sparen" }
+chart:
+  title: "Die 50/30/20-Aufteilung"
+  unit: "%"
+  data:
+    - { label: "Bedürfnisse", value: 50 }
+    - { label: "Wünsche", value: 30 }
+    - { label: "Sparen", value: 20 }
 ---
 
 Ein Budget soll dich nicht einschränken, sondern dir zeigen, wohin dein Geld fließt – damit du es für das Wichtige ausgibst. So fängst du am einfachsten an.

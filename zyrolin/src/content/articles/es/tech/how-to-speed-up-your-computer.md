@@ -7,6 +7,22 @@ pubDate: 2026-06-21
 author: "Equipo Zyrolin"
 featured: true
 tags: ["windows", "rendimiento", "pc"]
+keyTakeaways:
+  - "Desactivar las apps de inicio es la mejora más rápida para arranques lentos."
+  - "Un disco casi lleno ralentiza todo: deja algo de espacio libre."
+  - "Si sigue lento, un SSD es la mejora que merece la pena pagar."
+stats:
+  - { value: "~30 min", label: "Para un PC notablemente más rápido" }
+  - { value: "6", label: "Arreglos gratis" }
+  - { value: "0 €", label: "Sin hardware nuevo" }
+chart:
+  title: "Impacto relativo de cada arreglo"
+  data:
+    - { label: "Poner un SSD", value: 100 }
+    - { label: "Desactivar apps de inicio", value: 80 }
+    - { label: "Analizar en busca de malware", value: 70 }
+    - { label: "Liberar espacio en disco", value: 50 }
+    - { label: "Quitar programas que no usas", value: 40 }
 ---
 
 Un ordenador lento es frustrante, pero normalmente no necesitas comprar uno nuevo. Estos pasos aceleran la mayoría de PCs con Windows en menos de 30 minutos.

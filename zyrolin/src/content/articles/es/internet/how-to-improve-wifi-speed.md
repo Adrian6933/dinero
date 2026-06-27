@@ -7,6 +7,14 @@ pubDate: 2026-06-13
 author: "Equipo Zyrolin"
 featured: true
 tags: ["wifi", "router", "internet"]
+keyTakeaways:
+  - "La ubicación del router es lo que más importa: céntrico, elevado y despejado."
+  - "Usa la banda de 5 GHz para dispositivos cercanos; la de 2,4 GHz llega más lejos."
+  - "Reinícialo cada mes, actualiza el firmware y añade un mesh para las zonas muertas."
+stats:
+  - { value: "5 GHz", label: "Banda más rápida de cerca" }
+  - { value: "Mensual", label: "Reinicia el router" }
+  - { value: "Gratis", label: "La mayoría de arreglos no cuestan nada" }
 ---
 
 El wifi lento suele ser un problema de configuración, no de velocidad contratada. Estos cambios pueden mejorar mucho tu conexión, y casi todos son gratis.

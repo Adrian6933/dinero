@@ -7,6 +7,14 @@ pubDate: 2026-06-20
 author: "Equipo Zyrolin"
 featured: true
 tags: ["chatgpt", "ia", "principiantes"]
+keyTakeaways:
+  - "La versión gratuita basta para casi todas las tareas del día a día."
+  - "Mejores prompts = mejores respuestas: dale un rol, una tarea y detalles."
+  - "Nunca pegues contraseñas ni datos confidenciales en el chat."
+stats:
+  - { value: "Gratis", label: "Para empezar" }
+  - { value: "3", label: "Pasos hasta tu primer prompt" }
+  - { value: "0", label: "Conocimientos técnicos necesarios" }
 ---
 
 ChatGPT es una de las herramientas gratuitas más potentes que existen hoy. Tanto si quieres ayuda para escribir, aprender, programar o resolver dudas, esta guía te lleva por todo lo necesario para empezar, sin conocimientos técnicos.

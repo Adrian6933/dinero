@@ -7,6 +7,14 @@ pubDate: 2026-06-12
 author: "Equipo Zyrolin"
 featured: true
 tags: ["concentración", "productividad", "hábitos"]
+keyTakeaways:
+  - "Elimina las distracciones antes de empezar: ojos que no ven, mente que no se distrae."
+  - "Trabaja en bloques de concentración (Pomodoro): 25 minutos sí, 5 de descanso."
+  - "Haz una sola tarea y reserva lo más difícil para tus horas de máximo rendimiento."
+stats:
+  - { value: "25 / 5", label: "Pomodoro: concentración / descanso (min)" }
+  - { value: "25–90", label: "Minutos de concentración profunda, típico" }
+  - { value: "1", label: "Tarea a la vez" }
 ---
 
 La concentración es una habilidad que se entrena. Estas técnicas probadas te ayudan a enfocarte más tiempo y a rendir más, sin pelear con la fuerza de voluntad.

@@ -7,6 +7,14 @@ pubDate: 2026-06-13
 author: "Equipo Zyrolin"
 featured: true
 tags: ["orden", "organización", "hogar"]
+keyTakeaways:
+  - "Empieza por una zona pequeña para coger impulso, no por todo el garaje."
+  - "Clasifica todo en cuatro cajas: quedarte, donar, tirar, quizá."
+  - "Adopta la regla uno entra, uno sale para que el desorden no vuelva."
+stats:
+  - { value: "4", label: "Cajas del método" }
+  - { value: "15–30", label: "Minutos por zona" }
+  - { value: "1 entra, 1 sale", label: "Lo mantiene ordenado" }
 ---
 
 Ordenar agobia porque intentamos hacerlo todo de golpe. El truco es un sistema pequeño y repetible. Aquí tienes uno que de verdad funciona.

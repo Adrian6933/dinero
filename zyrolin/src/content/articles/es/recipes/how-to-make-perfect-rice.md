@@ -7,6 +7,22 @@ pubDate: 2026-06-14
 author: "Equipo Zyrolin"
 featured: true
 tags: ["arroz", "básicos", "cocina"]
+keyTakeaways:
+  - "Enjuaga el arroz hasta que el agua salga clara para evitar que quede pegajoso."
+  - "La proporción 1 : 1,5 de arroz y agua funciona para casi todo el arroz blanco."
+  - "Déjalo reposar tapado 5 minutos y luego suéltalo con un tenedor: eso lo deja suelto."
+stats:
+  - { value: "1 : 1,5", label: "Arroz y agua" }
+  - { value: "5 min", label: "Reposo antes de soltarlo" }
+  - { value: "0", label: "Arroceras necesarias" }
+chart:
+  title: "Tiempo de cocción por tipo de arroz"
+  unit: " min"
+  data:
+    - { label: "Jazmín", value: 12 }
+    - { label: "Blanco (grano largo)", value: 15 }
+    - { label: "Basmati", value: 15 }
+    - { label: "Integral", value: 40 }
 ---
 
 El arroz suelto y en su punto es una de las habilidades más útiles en la cocina, y una de las que más se estropea. Aquí tienes un método infalible que funciona solo con una olla.

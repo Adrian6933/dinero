@@ -7,6 +7,22 @@ pubDate: 2026-06-21
 author: "Équipe Zyrolin"
 featured: true
 tags: ["windows", "performance", "pc"]
+keyTakeaways:
+  - "Désactiver les applis au démarrage est le gain le plus rapide pour les démarrages lents."
+  - "Un disque presque plein ralentit tout : gardez de l'espace libre."
+  - "S'il rame encore, un SSD est l'amélioration qui vaut le coût."
+stats:
+  - { value: "~30 min", label: "Pour un PC nettement plus rapide" }
+  - { value: "6", label: "Solutions gratuites" }
+  - { value: "0 €", label: "Aucun nouveau matériel" }
+chart:
+  title: "Impact relatif de chaque correctif"
+  data:
+    - { label: "Passer à un SSD", value: 100 }
+    - { label: "Désactiver les applis au démarrage", value: 80 }
+    - { label: "Analyser les malwares", value: 70 }
+    - { label: "Libérer de l'espace disque", value: 50 }
+    - { label: "Supprimer les programmes inutilisés", value: 40 }
 ---
 
 Un ordinateur lent est frustrant, mais vous n'avez généralement pas besoin d'en acheter un neuf. Ces étapes accélèrent la plupart des PC Windows en moins de 30 minutes.

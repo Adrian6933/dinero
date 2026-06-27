@@ -7,6 +7,14 @@ pubDate: 2026-06-12
 author: "Equipo Zyrolin"
 featured: true
 tags: ["sueño", "salud", "bienestar"]
+keyTakeaways:
+  - "Acostarte y levantarte a la misma hora es el hábito más poderoso."
+  - "Mantén el dormitorio fresco, oscuro y sin pantallas."
+  - "Evita la cafeína después del mediodía y las pantallas cerca de la hora de dormir."
+stats:
+  - { value: "7–9 h", label: "Sueño que necesita la mayoría de adultos" }
+  - { value: "~18 °C", label: "Temperatura ideal del dormitorio" }
+  - { value: "30–60 min", label: "Sin pantallas antes de dormir" }
 ---
 
 Dormir bien es la base de la salud, la concentración y el ánimo. Estos hábitos sencillos y respaldados por la ciencia te ayudan a dormirte antes y despertar descansado.

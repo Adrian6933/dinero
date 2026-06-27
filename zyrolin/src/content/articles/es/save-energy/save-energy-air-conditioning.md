@@ -7,6 +7,21 @@ pubDate: 2026-06-17
 author: "Equipo Zyrolin"
 featured: true
 tags: ["aire-acondicionado", "ahorro-energia", "verano"]
+keyTakeaways:
+  - "El punto óptimo de eficiencia ronda los 24–26 °C."
+  - "Cada grado más frío puede sumar en torno a un 6–8% al consumo."
+  - "Ventiladores, persianas bajadas y filtros limpios te permiten ponerlo más alto cómodamente."
+stats:
+  - { value: "24–26 °C", label: "Mejor ajuste" }
+  - { value: "~7%", label: "Coste por grado extra" }
+  - { value: "12–16%", label: "Ahorro al subir 2 °C" }
+chart:
+  title: "Ahorro estimado por cambio"
+  unit: "%"
+  data:
+    - { label: "Subir el termostato 2 °C", value: 14 }
+    - { label: "Usar ventiladores + ajuste más alto", value: 10 }
+    - { label: "Limpiar los filtros", value: 10 }
 ---
 
 El aire acondicionado suele ser la mayor parte de la factura eléctrica en verano. Unos cambios inteligentes reducen bastante ese gasto manteniéndote cómodo.

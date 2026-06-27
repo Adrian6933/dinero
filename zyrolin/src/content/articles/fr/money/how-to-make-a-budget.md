@@ -7,6 +7,21 @@ pubDate: 2026-06-22
 author: "Équipe Zyrolin"
 featured: true
 tags: ["budget", "épargne", "finances-personnelles"]
+keyTakeaways:
+  - "La règle 50/30/20 répartit vos revenus en besoins, envies et épargne."
+  - "Suivez vos dépenses pendant deux semaines avant de bâtir le budget."
+  - "Faites le point chaque semaine — de petits ajustements valent mieux que les surprises mensuelles."
+stats:
+  - { value: "50 %", label: "Besoins" }
+  - { value: "30 %", label: "Envies" }
+  - { value: "20 %", label: "Épargne" }
+chart:
+  title: "La répartition 50/30/20"
+  unit: "%"
+  data:
+    - { label: "Besoins", value: 50 }
+    - { label: "Envies", value: 30 }
+    - { label: "Épargne", value: 20 }
 ---
 
 Un budget n'est pas fait pour vous priver, mais pour savoir où va votre argent afin de le dépenser pour ce qui compte vraiment. Voici la façon la plus simple de commencer.

@@ -7,6 +7,21 @@ pubDate: 2026-06-19
 author: "Équipe Zyrolin"
 featured: true
 tags: ["fps", "gaming", "performance", "pubg"]
+keyTakeaways:
+  - "Mettre à jour les pilotes GPU donne souvent un gain de FPS immédiat."
+  - "Les ombres et l'anticrénelage sont les plus gros tueurs de framerate."
+  - "Désactivez la V-Sync pour réduire l'input lag, et gardez le PC au frais."
+stats:
+  - { value: "Bas", label: "Meilleur réglage d'ombres" }
+  - { value: "Off", label: "V-Sync pour l'input lag" }
+  - { value: "4", label: "Changements au plus gros impact" }
+chart:
+  title: "Impact FPS des réglages courants (relatif)"
+  data:
+    - { label: "Ombres", value: 35 }
+    - { label: "Anticrénelage", value: 20 }
+    - { label: "Distance d'affichage", value: 15 }
+    - { label: "Textures", value: 10 }
 ---
 
 Un faible nombre de FPS rend les jeux saccadés et nuit à votre visée. Ces étapes augmentent les images sur la plupart des PC, des configs modestes au haut de gamme.

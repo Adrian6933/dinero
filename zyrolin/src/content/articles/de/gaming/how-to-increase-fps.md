@@ -7,6 +7,21 @@ pubDate: 2026-06-19
 author: "Zyrolin-Team"
 featured: true
 tags: ["fps", "gaming", "leistung", "pubg"]
+keyTakeaways:
+  - "GPU-Treiber zu aktualisieren bringt oft einen sofortigen FPS-Schub."
+  - "Schatten und Kantenglättung sind die größten Framerate-Killer."
+  - "Schalte V-Sync aus, um Input-Lag zu senken, und halte den PC kühl."
+stats:
+  - { value: "Niedrig", label: "Beste Schatten-Einstellung" }
+  - { value: "Aus", label: "V-Sync für Input-Lag" }
+  - { value: "4", label: "Änderungen mit größtem Effekt" }
+chart:
+  title: "FPS-Einfluss gängiger Einstellungen (relativ)"
+  data:
+    - { label: "Schatten", value: 35 }
+    - { label: "Kantenglättung", value: 20 }
+    - { label: "Sichtweite", value: 15 }
+    - { label: "Texturen", value: 10 }
 ---
 
 Wenige FPS lassen Spiele ruckeln und verschlechtern dein Zielen. Diese Schritte erhöhen die Bildrate auf den meisten PCs – von Einsteiger-Rechnern bis High-End.

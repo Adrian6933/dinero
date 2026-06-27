@@ -7,6 +7,22 @@ pubDate: 2026-06-14
 author: "Équipe Zyrolin"
 featured: true
 tags: ["riz", "bases", "cuisine"]
+keyTakeaways:
+  - "Rincez le riz jusqu'à ce que l'eau soit claire pour éviter qu'il colle."
+  - "Le ratio 1 : 1,5 riz/eau convient à la plupart des riz blancs."
+  - "Laissez-le reposer 5 minutes à couvert, puis aérez : c'est ce qui le rend léger."
+stats:
+  - { value: "1 : 1,5", label: "Riz / eau" }
+  - { value: "5 min", label: "Repos avant d'aérer" }
+  - { value: "0", label: "Cuiseur à riz nécessaire" }
+chart:
+  title: "Temps de cuisson par type de riz"
+  unit: " min"
+  data:
+    - { label: "Jasmin", value: 12 }
+    - { label: "Blanc (long grain)", value: 15 }
+    - { label: "Basmati", value: 15 }
+    - { label: "Complet", value: 40 }
 ---
 
 Un riz léger et parfaitement cuit est l'une des compétences les plus utiles en cuisine, et l'une des plus souvent ratées. Voici une méthode infaillible qui ne demande qu'une casserole.

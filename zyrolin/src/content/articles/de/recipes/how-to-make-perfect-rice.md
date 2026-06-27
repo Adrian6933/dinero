@@ -7,6 +7,22 @@ pubDate: 2026-06-14
 author: "Zyrolin-Team"
 featured: true
 tags: ["reis", "grundlagen", "kochen"]
+keyTakeaways:
+  - "Spüle den Reis, bis das Wasser klar ist, um Klebrigkeit zu vermeiden."
+  - "Das Verhältnis 1 : 1,5 von Reis zu Wasser passt für die meisten weißen Reissorten."
+  - "Lass ihn 5 Minuten zugedeckt ruhen, dann auflockern – das macht ihn locker."
+stats:
+  - { value: "1 : 1,5", label: "Reis zu Wasser" }
+  - { value: "5 Min.", label: "Ruhen vor dem Auflockern" }
+  - { value: "0", label: "Reiskocher nötig" }
+chart:
+  title: "Garzeit nach Reissorte"
+  unit: " Min."
+  data:
+    - { label: "Jasmin", value: 12 }
+    - { label: "Weiß (Langkorn)", value: 15 }
+    - { label: "Basmati", value: 15 }
+    - { label: "Vollkorn", value: 40 }
 ---
 
 Lockerer, perfekt gegarter Reis ist eine der nützlichsten Küchenfähigkeiten – und eine der häufigsten Pannen. Hier ist eine narrensichere Methode, die nur einen Topf braucht.
