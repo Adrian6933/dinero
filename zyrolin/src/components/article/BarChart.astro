@@ -1,0 +1,48 @@
+---
+import Icon from '../Icon.astro';
+
+// A clean horizontal bar chart rendered from the optional `chart` frontmatter.
+// Pure CSS/HTML (no JS), themed with the category accent.
+interface Props {
+  title?: string;
+  unit?: string;
+  data: { label: string; value: number }[];
+  accent?: string;
+}
+const { title, unit = '', data, accent = 'var(--color-brand)' } = Astro.props;
+const max = Math.max(...data.map((d) => d.value), 1);
+---
+
+<figure
+  class="my-7 rounded-[var(--radius-card)] border border-line bg-surface p-5"
+>
+  {
+    title && (
+      <figcaption class="mb-4 flex items-center gap-2 font-display font-bold text-fg">
+        <Icon name="bar-chart" size={18} class="text-brand" />
+        {title}
+      </figcaption>
+    )
+  }
+  <div class="space-y-3.5">
+    {
+      data.map((d) => (
+        <div>
+          <div class="mb-1 flex items-center justify-between text-sm">
+            <span class="text-fg-soft">{d.label}</span>
+            <span class="font-semibold text-fg" style="font-variant-numeric: tabular-nums">
+              {d.value}
+              {unit}
+            </span>
+          </div>
+          <div class="h-2.5 w-full overflow-hidden rounded-full bg-surface-2">
+            <div
+              class="h-full rounded-full"
+              style={`width:${(d.value / max) * 100}%;background:linear-gradient(90deg, ${accent}, color-mix(in oklab, ${accent} 55%, #ffffff))`}
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</figure>

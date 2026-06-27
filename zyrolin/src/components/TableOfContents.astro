@@ -1,0 +1,36 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+const { headings } = Astro.props;
+
+// Only show H2/H3 — deeper levels clutter the list.
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{
+  toc.length >= 2 && (
+    <nav
+      aria-label="Table of contents"
+      class="rounded-[var(--radius-card)] border border-line bg-surface p-5"
+    >
+      <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-muted">
+        Contents
+      </p>
+      <ul class="space-y-2 text-sm">
+        {toc.map((h) => (
+          <li class={h.depth === 3 ? 'ml-3' : ''}>
+            <a
+              href={`#${h.slug}`}
+              class="text-fg-soft transition hover:text-brand"
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}

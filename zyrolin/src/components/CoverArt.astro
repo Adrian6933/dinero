@@ -1,0 +1,91 @@
+---
+import Icon from './Icon.astro';
+
+// Generated thematic illustration used as an article/category cover. It clearly
+// communicates the topic (big icon + label) inside an editorial, premium frame.
+// No external photos needed — crisp at any size, on-brand, no licensing issues.
+interface Props {
+  accent: string;
+  icon: string;
+  label?: string;
+  ratio?: string;
+  big?: boolean;
+  class?: string;
+}
+const {
+  accent,
+  icon,
+  label,
+  ratio = '16 / 9',
+  big = false,
+  class: cls = '',
+} = Astro.props;
+---
+
+<div
+  class:list={['relative isolate overflow-hidden', cls]}
+  style={`--a:${accent}; aspect-ratio:${ratio};`}
+>
+  <!-- base gradient -->
+  <div
+    class="absolute inset-0"
+    style="background:
+      linear-gradient(150deg,
+        color-mix(in oklab, var(--a) 30%, var(--color-surface)) 0%,
+        var(--color-surface) 60%);"
+  >
+  </div>
+
+  <!-- soft accent blobs -->
+  <div
+    class="absolute -left-10 -top-12 h-40 w-40 rounded-full blur-2xl"
+    style="background: color-mix(in oklab, var(--a) 55%, transparent);"
+  >
+  </div>
+  <div
+    class="absolute -bottom-16 -right-10 h-44 w-44 rounded-full blur-3xl"
+    style="background: color-mix(in oklab, var(--a) 35%, transparent);"
+  >
+  </div>
+
+  <!-- fine grid -->
+  <div
+    class="absolute inset-0 opacity-[0.08]"
+    style="background-image:
+      linear-gradient(var(--color-fg) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-fg) 1px, transparent 1px);
+      background-size: 28px 28px;"
+  >
+  </div>
+
+  <!-- centered glass tile with icon + label -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
+    <div
+      class="flex items-center justify-center rounded-2xl border border-white/15 shadow-2xl backdrop-blur-sm"
+      style={`
+        width:${big ? '108px' : '76px'};
+        height:${big ? '108px' : '76px'};
+        background: linear-gradient(160deg, color-mix(in oklab, var(--a) 85%, #fff 10%), color-mix(in oklab, var(--a) 70%, #000 25%));
+        color:#fff;`}
+    >
+      <Icon name={icon} size={big ? 52 : 38} stroke={1.6} />
+    </div>
+    {
+      label && (
+        <span
+          class="font-display font-bold uppercase tracking-[0.18em] text-fg"
+          style={`font-size:${big ? '0.95rem' : '0.7rem'}; opacity:.85`}
+        >
+          {label}
+        </span>
+      )
+    }
+  </div>
+
+  <!-- corner sheen -->
+  <div
+    class="absolute inset-x-0 top-0 h-1/3"
+    style="background: linear-gradient(180deg, color-mix(in oklab, #fff 10%, transparent), transparent);"
+  >
+  </div>
+</div>

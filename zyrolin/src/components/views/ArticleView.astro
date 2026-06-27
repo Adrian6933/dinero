@@ -1,0 +1,192 @@
+---
+import { render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import TableOfContents from '../TableOfContents.astro';
+import ArticleCard from '../ArticleCard.astro';
+import AdSlot from '../AdSlot.astro';
+import Icon from '../Icon.astro';
+import CoverImage from '../CoverImage.astro';
+import KeyTakeaways from '../article/KeyTakeaways.astro';
+import StatRow from '../article/StatRow.astro';
+import BarChart from '../article/BarChart.astro';
+import { categoryIcon } from '../../data/categories';
+import { localizedCategory } from '../../i18n/categories';
+import {
+  articleSlug,
+  readingTime,
+  formatDate,
+  getRelatedArticles,
+  type Article,
+} from '../../utils/articles';
+import { useTranslations, localizedPath, type Locale } from '../../i18n/ui';
+
+interface Props {
+  article: Article;
+  lang: Locale;
+}
+const { article, lang } = Astro.props;
+const t = useTranslations(lang);
+
+const category = localizedCategory(article.data.category, lang)!;
+const accent = category.accent;
+const icon = categoryIcon(article.data.category);
+const { Content, headings } = await render(article);
+const minutes = readingTime(article);
+const related = await getRelatedArticles(article);
+---
+
+<!-- Reading progress bar -->
+<div
+  id="read-progress"
+  class="fixed left-0 top-0 z-50 h-0.5 w-0 bg-gradient-to-r from-brand to-brand-2"
+  style="transition: width 0.1s linear"
+>
+</div>
+
+<div class="mx-auto max-w-6xl px-4 py-8">
+  <Breadcrumbs
+    crumbs={[
+      { label: t('nav.home'), href: localizedPath(lang, '') },
+      { label: category.name, href: localizedPath(lang, article.data.category) },
+      { label: article.data.title },
+    ]}
+  />
+
+  <div class="mt-6 grid gap-12 lg:grid-cols-[1fr_300px]">
+    <article>
+      <header>
+        <a
+          href={localizedPath(lang, article.data.category)}
+          class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium"
+          style={`background:color-mix(in oklab, ${accent} 18%, transparent); color:${accent}`}
+        >
+          <Icon name={icon} size={13} /> {category.name}
+        </a>
+        <h1 class="mt-4 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-fg sm:text-[2.75rem]">
+          {article.data.title}
+        </h1>
+        <p class="mt-4 text-lg leading-relaxed text-muted">
+          {article.data.description}
+        </p>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm text-muted">
+          <span class="flex items-center gap-1.5">
+            <Icon name="calendar" size={14} />
+            {formatDate(article.data.updatedDate ?? article.data.pubDate, lang)}
+          </span>
+          <span class="flex items-center gap-1.5">
+            <Icon name="clock" size={14} />
+            {minutes} {t('card.readTime')}
+          </span>
+          <span>By {article.data.author}</span>
+        </div>
+      </header>
+
+      <div class="mt-7 overflow-hidden rounded-[var(--radius-card)] border border-line">
+        {
+          article.data.cover ? (
+            <Image
+              src={article.data.cover}
+              alt={article.data.coverAlt ?? article.data.title}
+              width={1200}
+              height={630}
+              class="w-full object-cover"
+            />
+          ) : (
+            <CoverImage
+              category={article.data.category}
+              slug={articleSlug(article)}
+              accent={accent}
+              name={category.name}
+              ratio="21 / 9"
+              big
+              width={1400}
+            />
+          )
+        }
+      </div>
+
+      {article.data.stats && <StatRow stats={article.data.stats} accent={accent} />}
+
+      <div class="mt-7 lg:hidden">
+        <TableOfContents headings={headings} />
+      </div>
+
+      <AdSlot variant="leaderboard" class="my-7" />
+
+      {
+        article.data.keyTakeaways && (
+          <KeyTakeaways items={article.data.keyTakeaways} label={t('article.takeaways')} />
+        )
+      }
+
+      <div class="prose-zyrolin mt-7 max-w-none">
+        <Content />
+      </div>
+
+      {
+        article.data.chart && (
+          <BarChart
+            title={article.data.chart.title}
+            unit={article.data.chart.unit}
+            data={article.data.chart.data}
+            accent={accent}
+          />
+        )
+      }
+
+      {
+        article.data.tags.length > 0 && (
+          <div class="mt-8 flex flex-wrap gap-2">
+            {article.data.tags.map((tag) => (
+              <span class="rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium text-muted">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )
+      }
+
+      {
+        related.length > 0 && (
+          <section class="mt-14">
+            <h2 class="mb-6 flex items-center gap-2.5 font-display text-2xl font-bold text-fg">
+              <Icon name="book-open" size={22} class="text-brand" />
+              {t('section.related')}
+            </h2>
+            <div class="grid gap-6 sm:grid-cols-3">
+              {related.map((r) => (
+                <ArticleCard article={r} lang={lang} />
+              ))}
+            </div>
+          </section>
+        )
+      }
+    </article>
+
+    <aside>
+      <div class="sticky top-20 space-y-6">
+        <div class="hidden lg:block">
+          <TableOfContents headings={headings} />
+        </div>
+        <AdSlot variant="rectangle" />
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+  // Reading progress bar: fills as you scroll through the page.
+  const bar = document.getElementById('read-progress');
+  if (bar) {
+    const update = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      bar.style.width = pct + '%';
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+  }
+</script>

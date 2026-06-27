@@ -1,0 +1,44 @@
+---
+interface Crumb {
+  label: string;
+  href?: string;
+}
+interface Props {
+  crumbs: Crumb[];
+}
+const { crumbs } = Astro.props;
+
+// Build schema.org BreadcrumbList for rich results in Google.
+const itemListElement = crumbs.map((c, i) => ({
+  '@type': 'ListItem',
+  position: i + 1,
+  name: c.label,
+  ...(c.href ? { item: new URL(c.href, Astro.site).toString() } : {}),
+}));
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement,
+};
+---
+
+<nav aria-label="Breadcrumb" class="text-sm text-muted">
+  <ol class="flex flex-wrap items-center gap-1.5">
+    {
+      crumbs.map((c, i) => (
+        <li class="flex items-center gap-1.5">
+          {c.href && i < crumbs.length - 1 ? (
+            <a href={c.href} class="transition hover:text-brand">
+              {c.label}
+            </a>
+          ) : (
+            <span class="text-fg-soft">{c.label}</span>
+          )}
+          {i < crumbs.length - 1 && <span class="text-line">/</span>}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />

@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../data/site';
+import { LOCALES, localizedPath } from '../i18n/ui';
+
+// English-only page: switching language returns to that language's home.
+const localePaths = Object.fromEntries(
+  LOCALES.map((l) => [l, localizedPath(l, '')]),
+);
+---
+
+<BaseLayout
+  title="About"
+  description={`Learn more about ${SITE.name} and our mission to make learning anything simple.`}
+  localePaths={localePaths}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    <Breadcrumbs
+      crumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'About', href: '/about' },
+      ]}
+    />
+    <h1 class="mt-5 font-display text-4xl font-semibold tracking-tight text-fg">
+      About {SITE.name}
+    </h1>
+    <div class="prose-zyrolin mt-6 max-w-none">
+      <p>
+        {SITE.name} exists for one reason: to help you learn how to do things,
+        explained simply and step by step. No jargon, no fluff — just clear
+        tutorials that actually work.
+      </p>
+      <h2>What we cover</h2>
+      <p>
+        We write practical guides across many topics — artificial intelligence,
+        technology, personal finance, cooking, home improvement, gaming, and
+        more. Whatever you're trying to figure out, we aim to have a guide for
+        it.
+      </p>
+      <h2>How we create our content</h2>
+      <p>
+        Every guide is researched, written, and reviewed for accuracy. We test
+        the steps where possible and update articles as things change, so the
+        information stays current and trustworthy.
+      </p>
+      <h2>A note on advice</h2>
+      <p>
+        Our finance and health articles are for general information only and are
+        not professional advice. Always consult a qualified professional before
+        making important decisions.
+      </p>
+      <h2>Get in touch</h2>
+      <p>
+        Have a suggestion or found something out of date? We'd love to hear from
+        you — visit our <a href="/contact">contact page</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,94 @@
+---
+import Logo from './Logo.astro';
+import { SITE } from '../data/site';
+import { CATEGORIES } from '../data/categories';
+import { localizedCategory } from '../i18n/categories';
+import { useTranslations, localizedPath, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const year = new Date().getFullYear();
+const topCategories = CATEGORIES.slice(0, 8);
+
+// Legal/about pages are English-only for now, so always link to the root URLs.
+const legalLinks = [
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Cookies', href: '/cookie-policy' },
+  { label: 'Terms', href: '/terms' },
+];
+---
+
+<footer class="mt-24 border-t border-line bg-bg-soft">
+  <div class="mx-auto max-w-6xl px-4 py-14">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a href={localizedPath(locale, '')} aria-label="Zyrolin home">
+          <Logo size={32} />
+        </a>
+        <p class="mt-3 max-w-xs text-sm leading-relaxed text-muted">
+          {SITE.description}
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-muted">
+          {t('footer.topics')}
+        </h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          {
+            topCategories.map((c) => (
+              <li>
+                <a
+                  href={localizedPath(locale, c.slug)}
+                  class="text-fg-soft transition hover:text-brand"
+                >
+                  {localizedCategory(c.slug, locale)?.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-muted">
+          {t('footer.site')}
+        </h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          {
+            legalLinks.map((l) => (
+              <li>
+                <a href={l.href} class="text-fg-soft transition hover:text-brand">
+                  {l.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-muted">
+          {t('footer.follow')}
+        </h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href={SITE.social.youtube} class="text-fg-soft transition hover:text-brand">YouTube</a></li>
+          <li><a href={SITE.social.pinterest} class="text-fg-soft transition hover:text-brand">Pinterest</a></li>
+          <li><a href={SITE.social.twitter} class="text-fg-soft transition hover:text-brand">Twitter / X</a></li>
+          <li><a href={SITE.social.facebook} class="text-fg-soft transition hover:text-brand">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 hairline"></div>
+    <p class="mt-6 text-center text-sm text-muted">
+      © {year} {SITE.name}. {t('footer.rights')}
+    </p>
+  </div>
+</footer>

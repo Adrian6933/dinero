@@ -1,0 +1,33 @@
+---
+// Placeholder ad slot. Once AdSense is approved, drop the <ins> tag and script
+// in here. Until then it renders a clearly-labelled placeholder so layouts are
+// designed with ad space in mind. Keep to max 3-4 ad slots per page.
+interface Props {
+  variant?: 'leaderboard' | 'rectangle' | 'sidebar';
+  class?: string;
+}
+const { variant = 'rectangle', class: className = '' } = Astro.props;
+
+const sizes: Record<string, string> = {
+  leaderboard: 'min-h-[90px]',
+  rectangle: 'min-h-[250px]',
+  sidebar: 'min-h-[600px]',
+};
+
+const SHOW_PLACEHOLDER = true;
+---
+
+{
+  SHOW_PLACEHOLDER && (
+    <aside
+      class:list={[
+        'flex items-center justify-center rounded-xl border border-dashed border-line bg-surface/50 text-[0.7rem] font-medium uppercase tracking-[0.2em] text-muted',
+        sizes[variant],
+        className,
+      ]}
+      aria-hidden="true"
+    >
+      Advertisement
+    </aside>
+  )
+}

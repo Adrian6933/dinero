@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../data/site';
+import { LOCALES, localizedPath } from '../i18n/ui';
+
+const localePaths = Object.fromEntries(
+  LOCALES.map((l) => [l, localizedPath(l, '')]),
+);
+---
+
+<BaseLayout
+  title="Contact"
+  description={`Get in touch with the ${SITE.name} team.`}
+  localePaths={localePaths}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    <Breadcrumbs
+      crumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Contact', href: '/contact' },
+      ]}
+    />
+    <h1 class="mt-5 font-display text-4xl font-semibold tracking-tight text-fg">
+      Contact us
+    </h1>
+    <div class="prose-zyrolin mt-6 max-w-none">
+      <p>
+        Questions, feedback, corrections, or partnership ideas? We read every
+        message.
+      </p>
+      <p>
+        Email us at:
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </p>
+      <p>We typically reply within 2–3 business days.</p>
+    </div>
+
+    <!-- Contact form → delivered by FormSubmit.co (confirm the first email). -->
+    <form
+      class="mt-8 space-y-4 rounded-[var(--radius-card)] border border-line bg-surface p-6"
+      action={SITE.formEndpoint}
+      method="POST"
+    >
+      <!-- FormSubmit options -->
+      <input type="hidden" name="_subject" value="New Zyrolin contact message" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="https://zyrolin.com/contact" />
+      <!-- Honeypot: bots fill this, humans don't -->
+      <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+      <div>
+        <label class="block text-sm font-medium text-fg-soft" for="name">Name</label>
+        <input
+          id="name"
+          name="name"
+          required
+          autocomplete="name"
+          class="mt-1 w-full rounded-lg border border-line bg-bg px-3 py-2 text-fg outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-fg-soft" for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+          inputmode="email"
+          spellcheck="false"
+          class="mt-1 w-full rounded-lg border border-line bg-bg px-3 py-2 text-fg outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-fg-soft" for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          class="mt-1 w-full rounded-lg border border-line bg-bg px-3 py-2 text-fg outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="rounded-full bg-brand px-6 py-2.5 font-semibold text-white transition hover:bg-brand-2"
+      >
+        Send message
+      </button>
+    </form>
+  </div>
+</BaseLayout>

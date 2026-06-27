@@ -1,0 +1,28 @@
+---
+// A row of big, attention-grabbing stat cards. From the optional `stats`
+// frontmatter array. Auto-fits responsively (2–4 per row).
+interface Props {
+  stats: { value: string; label: string }[];
+  accent?: string;
+}
+const { stats, accent = 'var(--color-brand)' } = Astro.props;
+---
+
+<div
+  class="my-7 grid gap-3"
+  style="grid-template-columns: repeat(auto-fit, minmax(130px, 1fr))"
+>
+  {
+    stats.map((s) => (
+      <div class="rounded-[var(--radius-card)] border border-line bg-surface p-4 text-center">
+        <div
+          class="font-display text-3xl font-extrabold tracking-tight"
+          style={`color:${accent}`}
+        >
+          {s.value}
+        </div>
+        <div class="mt-1 text-xs leading-snug text-muted">{s.label}</div>
+      </div>
+    ))
+  }
+</div>

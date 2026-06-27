@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../data/site';
+import { LOCALES, localizedPath } from '../i18n/ui';
+const updated = 'June 2026';
+const localePaths = Object.fromEntries(
+  LOCALES.map((l) => [l, localizedPath(l, '')]),
+);
+---
+
+<BaseLayout title="Privacy Policy" noindex={true} localePaths={localePaths}>
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    <Breadcrumbs
+      crumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Privacy Policy', href: '/privacy' },
+      ]}
+    />
+    <h1 class="mt-5 font-display text-4xl font-semibold tracking-tight text-fg">
+      Privacy Policy
+    </h1>
+    <p class="mt-1 text-sm text-muted">Last updated: {updated}</p>
+    <div class="prose-zyrolin mt-6 max-w-none">
+      <blockquote>
+        <strong>Note:</strong> This is a starter template. Have it reviewed by a
+        legal professional and tailor it to your jurisdiction before launch —
+        AdSense requires an accurate privacy policy.
+      </blockquote>
+      <p>
+        {SITE.name} ("we", "us") respects your privacy. This policy explains
+        what information we collect and how we use it.
+      </p>
+      <h2>Information we collect</h2>
+      <p>
+        We collect anonymous usage data through analytics, and any information
+        you voluntarily provide (such as your email when subscribing to our
+        newsletter or your message via our contact form).
+      </p>
+      <h2>Cookies and advertising</h2>
+      <p>
+        We use cookies to improve your experience and to serve ads. Third-party
+        vendors, including Google, use cookies to serve ads based on your prior
+        visits. Google's use of advertising cookies enables it and its partners
+        to serve ads based on your visit to this and other sites. You can opt
+        out of personalized advertising via Google's Ads Settings.
+      </p>
+      <h2>Analytics</h2>
+      <p>
+        We use analytics tools to understand how visitors use the site. This
+        data is aggregated and does not personally identify you.
+      </p>
+      <h2>Your rights</h2>
+      <p>
+        Depending on where you live, you may have the right to access, correct,
+        or delete your personal data. Contact us at
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a> to make a request.
+      </p>
+      <h2>Changes</h2>
+      <p>
+        We may update this policy from time to time. Changes will be posted on
+        this page with an updated date.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

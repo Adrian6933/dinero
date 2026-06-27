@@ -1,1092 +1,1456 @@
-# 💰 Guía Completa: Ideas de Páginas Web para Ganar Dinero
+# 💰 Guía Completa: Ganar Dinero con Webs y Servicios Digitales (2026)
+### Para una persona, desde casa, usando IA en cada paso del proceso
 
-> Documento completo y actualizado (2026) con **todas las ideas posibles** para monetizar páginas web.
-> Organizado desde lo **más fácil y rápido** hasta modelos más avanzados.
-
----
-
-## 📑 Índice
-
-1. [Conceptos clave antes de empezar](#1-conceptos-clave-antes-de-empezar)
-2. [🌐 ESTRATEGIA DE IDIOMA — Inglés como público principal](#idioma)
-3. [🗂️ UN DOMINIO, VARIAS PÁGINAS — Subdominios vs carpetas](#estructura)
-4. [⚠️ ¿Varios nichos sin relación en un mismo dominio? (análisis honesto)](#multi-nicho)
-5. [🟢 NIVEL 1 — Páginas fáciles para AdSense (tráfico fácil)](#nivel-1)
-6. [🟡 NIVEL 2 — Nichos rentables con AdSense](#nivel-2)
-7. [🟠 NIVEL 3 — Otras formas de monetizar (sin solo AdSense)](#nivel-3)
-8. [🔴 NIVEL 4 — Modelos avanzados de mayor ingresos](#nivel-4)
-9. [🚫 Qué EVITAR (AdSense rechaza o banea)](#evitar)
-10. [📝 Requisitos de AdSense 2026](#adsense-requisitos)
-11. [🛠️ Stack técnico recomendado (fácil y gratis)](#stack)
-12. [📈 Estrategia de tráfico SEO paso a paso](#seo)
-13. [📅 Plan de acción de 90 días](#plan)
-14. [📊 Calculadora de ingresos estimados](#calculadora)
-15. [🎯 Plantillas de nicho por orden de facilidad](#plantillas)
+> **Premisa fundamental:** Todo en esta guía se hace CON IA. No es una sección aparte — es la forma
+> de trabajar. La IA redacta, diseña, programa, traduce, investiga nichos y automatiza tareas.
+> Tú diriges, decides y distribuyes. Con IA puedes producir como un equipo de 5 personas.
 
 ---
 
-<a name="1-conceptos-clave-antes-de-empezar"></a>
-## 1. 🧠 Conceptos clave antes de empezar
-
-### ¿Cómo funciona el dinero en una web?
-- **CPC (Coste por clic):** cobras cada vez que alguien hace clic en un anuncio. (0,10 $ a 5 $ por clic según nicho).
-- **RPM (Ingresos por cada 1000 visitas):** métrica clave. Varía enormemente por nicho.
-- **Afiliados:** cobras comisión por vender productos de terceros (Amazon, Hotmart, etc.).
-- **CPA (Coste por acción):** cobras cuando el usuario hace una acción (registro, descarga).
-
-### RPM aproximado por nicho (datos 2025-2026)
-
-| Nicho | RPM (USD por 1000 visitas) |
-|---|---|
-| Finanzas / Seguros | **30 $ – 80 $** ⭐ |
-| Tecnología / Software | 15 $ – 40 $ |
-| Salud y bienestar | 10 $ – 35 $ |
-| Educación / Formación | 10 $ – 30 $ |
-| Viajes | 8 $ – 25 $ |
-| Cocina / Recetas | 3 $ – 10 $ |
-| Entretenimiento / Curiosidades | 1 $ – 5 $ |
-| Descargas / Wallpapers | 0,50 $ – 2 $ |
-
-> 💡 **Regla de oro:** Nichos aburridos y técnicos pagan MÁS. Nichos divertidos pagan menos pero traen más tráfico fácil.
-
-### La fórmula del éxito
+## 🗺️ ELIGE TU CAMINO (Lee esto primero)
 
 ```
-INGRESOS = Tráfico × RPM / 1000
+┌──────────────────────────────────────────────────────────────────┐
+│  ¿CUÁNTO TIEMPO PUEDES ESPERAR ANTES DE VER DINERO?              │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                    │
+│  ⚡ ESTA SEMANA       🗓️ EN 1-2 MESES      📅 EN 3-6 MESES         │
+│  ─────────────        ──────────────        ───────────────        │
+│  Webs servicio        Productos             Web herramientas       │
+│  (Sección 4)          digitales             + AdSense              │
+│                       (Sección 3.2)         (Sección 2)            │
+│  Automatizaciones     Print on Demand       Blog + Afiliados       │
+│  IA (Sección 5)       (Sección 3.3)         (Sección 3.1)          │
+│                                                                    │
+│  💡 COMBO GANADOR:                                                  │
+│  Servicios (paga facturas hoy) +                                   │
+│  Web pasiva (libertad mañana)                                      │
+└──────────────────────────────────────────────────────────────────┘
+```
 
-Ejemplo: 50.000 visitas/mes en "Finanzas" →
-         50 × 50 $ = 2.500 $/mes
-Ejemplo: 50.000 visitas/mes en "Curiosidades" →
-         50 × 3 $ = 150 $/mes
+---
+
+## 📑 ÍNDICE
+
+### BLOQUE 0 — FUNDAMENTOS (Lee antes de todo)
+- [0.1 Cómo funciona el dinero online (RPM, CPC, fórmulas)](#fundamentos)
+- [0.2 Por qué inglés gana 10x más](#idioma)
+- [0.3 Arquitectura de dominio (carpetas vs subdominios)](#arquitectura)
+- [0.4 Cómo usar la IA en TODO este proceso](#ia-base)
+
+### BLOQUE 1 — WEBS DE CONTENIDO (Pasivo, 3-6 meses)
+- [1.1 Herramientas online (calculadoras, conversores)](#herramientas)
+- [1.2 Blog de nicho + AdSense](#blog-nicho)
+- [1.3 Cómo encontrar tu nicho (con IA)](#encontrar-nicho)
+- [1.4 Estrategia SEO completa + plan 90 días](#seo)
+- [1.5 Cómo crecer más rápido](#crecer-rapido)
+
+### BLOQUE 2 — MONETIZACIÓN (Ingresos extra sobre el tráfico)
+- [2.1 Afiliados PRO: cómo elegir, crear y escalar](#afiliados)
+- [2.2 Productos digitales: el modelo de mayor margen](#productos-digitales)
+- [2.3 Print on Demand: productos físicos sin stock](#pod)
+- [2.4 E-commerce y Dropshipping](#ecommerce)
+
+### BLOQUE 3 — SERVICIOS (Dinero ya, 1-4 semanas)
+- [3.1 Webs como servicio para negocios](#webs-servicio)
+- [3.2 Automatizaciones y agentes IA](#automatizaciones)
+- [3.3 Contenido faceless (YouTube/TikTok)](#faceless)
+
+### BLOQUE 4 — REFERENCIA RÁPIDA
+- [4.1 Stack completo de herramientas IA](#stack-ia)
+- [4.2 Tabla maestra: todos los modelos](#tabla-maestra)
+- [4.3 Árbol de decisión](#decision)
+- [4.4 Checklist de inicio por modelo](#checklists)
+
+### ⭐ BLOQUE 5 — ARQUITECTURA PARA MÚLTIPLES PROYECTOS (Tu caso específico)
+- [5.1 La verdad: subdominio vs carpeta vs dominio propio](#subdominio-vs-carpeta)
+- [5.2 Quiero hacer de todo: cómo organizarlo sin romperte el SEO](#todo-a-la-vez)
+- [5.3 Estrategia de dominios para múltiples proyectos](#estrategia-dominios)
+- [5.4 El mapa completo de zyrolin.com + proyectos extra](#zyrolin-mapa)
+- [5.5 En qué orden lanzar cada proyecto (con IA solo)](#orden-lanzamiento)
+- [5.6 Cómo gestionar varios proyectos a la vez con IA](#gestionar-varios)
+
+---
+
+## BLOQUE 0 — FUNDAMENTOS
+
+<a name="fundamentos"></a>
+### 0.1 Cómo funciona el dinero online
+
+Antes de elegir qué hacer, entiende cómo se genera el dinero.
+
+**La fórmula universal:**
+```
+INGRESOS = Tráfico × Tasa de conversión × Valor por conversión
+```
+
+**Desglosada por modelo:**
+
+| Modelo | Tráfico | Conversión | Valor |
+|--------|---------|-----------|-------|
+| AdSense | Visitas | 1-5% clic anuncio | 0,10-5 $ por clic |
+| Afiliados | Visitas | 1-5% compra | 5-200 $ por venta |
+| Productos digitales | Visitas | 1-3% compra | 5-200 € por venta |
+| Servicios | Contactos | 10-30% cierre | 300-1500 € por proyecto |
+
+**Métricas clave:**
+
+| Término | Qué es | Rango típico |
+|---------|--------|--------------|
+| **RPM** | Ingresos por 1.000 visitas | 1-80 $ |
+| **CPC** | Cobras por clic en anuncio | 0,10-5 $ |
+| **CTR** | % de visitantes que clican | 1-5% |
+| **CPA** | Pago por acción (registro, lead) | 1-100 $ |
+| **Afiliado SaaS** | Comisión recurrente mensual | 20-40% |
+
+**RPM por nicho (cuánto ganas por cada 1.000 visitas):**
+
+| Nicho | RPM | Por qué |
+|-------|-----|---------|
+| 🏦 Finanzas/Seguros | **30-80 $** | Anunciantes con presupuesto enorme |
+| 💻 Tecnología/IA | 15-40 $ | Compradores con dinero |
+| 🏥 Salud | 10-35 $ | Alto CPC, riesgo de aprobación |
+| ✈️ Viajes | 8-25 $ | Bueno + afiliados (Booking) |
+| 🍳 Cocina | 3-10 $ | Tráfico fácil, poca comisión |
+| 🎬 Entretenimiento | 1-5 $ | Masivo pero bajo CPC |
+
+**Ejemplo real:**
+```
+50.000 visitas/mes en Finanzas (RPM 50$) → 50 × 50 = 2.500$/mes
+50.000 visitas/mes en Curiosidades (RPM 3$) → 50 × 3 = 150$/mes
+
+El MISMO tráfico, 16x más dinero eligiendo bien el nicho.
 ```
 
 ---
 
 <a name="idioma"></a>
-## 2. 🌐 ESTRATEGIA DE IDIOMA — Inglés como público principal
+### 0.2 Por qué inglés gana 10x más (y cómo usarlo sin hablar inglés)
 
-> El inglés es **la mejor decisión estratégica** para monetizar con AdSense.
-> Vamos a ver por qué, cómo organizarlo y cómo no perder al público hispano/global.
+Los anunciantes de EE.UU., UK, Canadá y Australia pagan mucho más por cada clic.
 
-### 2.1 Por qué el inglés paga MUCHO más
+**Multiplicadores reales:**
 
-Los anunciantes de EE.UU., Reino Unido, Canadá y Australia pujan más alto por las palabras clave. Resultado: **el mismo artículo en inglés genera entre 3x y 10x más ingresos** que en español.
+| Mercado | Multiplicador | Ejemplo en finanzas |
+|---------|--------------|---------------------|
+| 🇺🇸 EE.UU. (inglés) | **10x** | RPM 60-80 $ |
+| 🇬🇧 UK (inglés) | 8x | RPM 50-65 $ |
+| 🇩🇪 Alemania | 4-5x | RPM 25-40 $ |
+| 🇪🇸 España | 2-3x | RPM 15-25 $ |
+| 🇲🇽 LATAM | 1-1,5x | RPM 5-12 $ |
 
-| Idioma / Geografía | RPM relativo | Comentario |
-|---|---|---|
-| 🇺🇸 EE.UU. (inglés) | **10x** ⭐ | Anunciantes con mayor poder adquisitivo |
-| 🇬🇧 Reino Unido (inglés) | **8x** | Muy rentable |
-| 🇨🇦 Canadá / 🇦🇺 Australia | **7x** | Excelente |
-| 🇩🇪 Alemán / 🇫🇷 Francés | 4-5x | Buena alternativa |
-| 🇪🇸 Español España | 2-3x | Decente |
-| 🇲🇽🇦🇷 Español LATAM | 1-1,5x | Bajo CPC pero volumen alto |
-| Hindi / Árabe / otros | 0,3-0,8x | Mucho tráfico, poco pago |
+**¿Y si no hablas inglés?**
 
-**Ejemplo real:**
-- 10.000 visitas/mes en finanzas en español → ~150-250 $/mes
-- 10.000 visitas/mes en finanzas en inglés → **1.000-2.500 $/mes**
+La IA lo soluciona. Proceso:
+1. Escribe tu contenido en español (lo que sabes)
+2. Usa Claude o DeepL para traducir/redactar en inglés
+3. Revisa que suene natural (5 min por artículo)
+4. Publica en inglés, añade selector de idioma
 
-### 2.2 ¿Cómo hacer que "el resto del público" también pueda verlo?
+**Prompt para Claude:**
+```
+"Redacta un artículo SEO en inglés sobre [tema]. 
+Título: [tu título]. Longitud: 1.200 palabras.
+Incluye H2, H3, ejemplos prácticos y párrafo de conclusión.
+Tono: claro, informativo, sin jerga excesiva."
+```
 
-Tienes **3 opciones**, de peor a mejor:
-
-#### ❌ Opción A (NO recomendada): Traducción automática de Google
-Google Translate widget → traduce al vuelo. **Problema:** el contenido traducido es de baja calidad, Google lo detecta como contenido thin/duplicado y **no te posiciona ni en otros idiomas**. AdSense no la valora.
-
-#### ⚠️ Opción B (mejorable): Multilenguaje manual
-Escribes el artículo en inglés y luego lo traduces tú (o con IA curada) a español, francés, etc. usando `hreflang`. Calidad buena pero trabajo x3.
-
-#### ✅ Opción C (RECOMENDADA): Inglés principal + estructura multilenguaje con IA bien hecha
-
-**Estrategia:**
-1. **Escribes todo en inglés** (es tu contenido principal y el que posiciona).
-2. Para ofrecer otros idiomas, traduces con IA **curada** (no automática) y la revisas.
-3. Usas estructura de URLs con `hreflang` para que Google entienda las versiones:
-   ```
-   tudominio.com/calculator-bmi            → inglés (principal)
-   tudominio.com/es/calculadora-imc        → español
-   tudominio.com/fr/calculateur-imc        → francés
-   ```
-4. Pones un **selector de idioma** en la cabecera.
-
-**Herramientas para traducir bien con IA:**
-- DeepL Pro (mejor que Google Translate)
-- ChatGPT / Claude con prompt: *"Traduce este artículo al español conservando el tono SEO, los H2, las palabras clave y sin traducir literalmente las expresiones idiomáticas"*
-- WordPress plugins: **Polylang, WPML, TranslatePress** (combinan traducción manual + automática)
-
-### 2.3 Configuración técnica recomendada
-
-| Elemento | Recomendación |
-|---|---|
-| Idioma principal | Inglés (raíz del dominio) |
-| Idiomas secundarios | Español, francés, alemán, portugués (los que más volumen extra te dan) |
-| Plugin WordPress | **Polylang** (gratis) o WPML (de pago) |
-| Etiquetas hreflang | Obligatorias para no canibalizar |
-| Selector de idioma | Bandera + nombre del idioma, arriba a la derecha |
-| Sitemap | Uno por idioma, enviado a Search Console |
-| Contenido traducido | Revisar la calidad, NO publicar traducción automática cruda |
-
-### 2.4 Truco PRO: nichos con vocabulario universal
-
-Hay nichos que **casi no necesitan traducción** porque se buscan igual en todos los idiomas. Perfectos para público global con inglés:
-
-- 🔢 **Calculadoras** (BIM calculator, BMI, mortgage calculator...) → la herramienta es universal, solo traduces los textos explicativos
-- 🔄 **Conversores** (PDF to Word, image compressor, QR generator) → interfaz mínima
-- 🎨 **Generadores** (password, color palette, lorem ipsum) → casi sin texto
-- 📅 **Tablas y datos** (country codes, currency rates, time zones)
-- 💻 **Tecnología/IA** (ChatGPT tutorials, prompts) → todo el mundo busca en inglés
-
-> 💡 **Conclusión idioma:** Tu mejor jugada es **inglés como base** + herramientas/utilidades universales que funcionan en cualquier país + selector de idioma para los que prefieran su idioma.
+**Nichos "universales" — casi no necesitan traducción:**
+- Calculadoras (BMI, mortgage, loan)
+- Conversores (PDF, images, currency)
+- Generadores (password, QR, color)
+- Tutoriales de software/apps (todo el mundo busca en inglés)
 
 ---
 
-<a name="estructura"></a>
-## 3. 🗂️ UN DOMINIO, VARIAS PÁGINAS — Subdominios vs carpetas
+<a name="arquitectura"></a>
+### 0.3 Arquitectura de dominio
 
-> Quieres reutilizar tu dominio para varias páginas y ahorrar dinero. **Buena idea siempre que se haga bien.**
-> Aquí tienes la comparativa técnica y la recomendación final.
+**Regla simple:**
 
-### 3.1 Las 3 formas de organizar varias páginas en un dominio
+| Situación | Usar |
+|-----------|------|
+| Temas relacionados | Carpetas: `tudominio.com/calculators` |
+| Temas totalmente distintos | Subdominios: `finance.tudominio.com` |
 
+**La arquitectura ideal para tu caso:**
 ```
-OPCIÓN A — CARPETAS (subdirectorio)
-   tudominio.com/calculators
-   tudominio.com/converters
-   tudominio.com/dictionary
-
-OPCIÓN B — SUBDOMINIOS
-   calculators.tudominio.com
-   converters.tudominio.com
-   dictionary.tudominio.com
-
-OPCIÓN C — MIXTA (carpetas para lo relacionado, subdominios para lo distinto)
-   tudominio.com/calculators        ← relacionado
-   tudominio.com/converters         ← relacionado
-   pets.tudominio.com               ← tema distinto
-   finance.tudominio.com            ← tema distinto
-```
-
-### 3.2 Comparativa detallada
-
-| Criterio | Carpetas `/pagina` | Subdominios `pagina.dominio` |
-|---|---|---|
-| **SEO (autoridad del dominio)** | ✅ Suma toda la autoridad al dominio principal | ⚠️ Cada subdominio es "casi un dominio nuevo", construye su autoridad por separado |
-| **Posicionamiento** | ✅ Más fácil rankear nuevas páginas | 🟡 Tarda más en posicionar cada subdominio |
-| **Gestión técnica** | ✅ Una sola instalación, un solo Search Console | ⚠️ Search Console por separado, configuración independiente |
-| **AdSense** | ✅ Una sola cuenta, anuncios en todo | ✅ También válido (mismo dominio raíz) |
-| **Aislamiento de temas** | ❌ Los temas mezclados se "contaminan" | ✅ Cada tema vive aislado |
-| **Velocidad/caché** | ✅ Compartida | 🟡 Depende de la infraestructura |
-| **Marca** | ✅ Coherente, un solo sitio | 🟡 Parecen varios proyectos |
-| **Coste** | ✅ Un dominio, un hosting | ✅ Un dominio, mismo hosting |
-
-### 3.3 Regla de oro para elegir
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  ¿Las páginas comparten TEMA / audiencia / intención?        │
-│                                                              │
-│   SÍ → CARPETA  (/calculators, /converters, /dictionary)    │
-│   NO  → SUBDOMINIO (finance.dominio.com, pets.dominio.com)  │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### 3.4 Ejemplos prácticos
-
-#### ✅ Buena arquitectura con carpetas (temas relacionados)
-```
-utilitytools.com/
-   ├── /calculators/bmi
-   ├── /calculators/mortgage
-   ├── /calculators/loan
-   ├── /converters/pdf-to-word
-   ├── /converters/image-compressor
-   ├── /generators/password
-   ├── /generators/qr-code
-   └── /dictionary/dreams
-```
-**Ventaja:** todo suma autoridad bajo "herramientas útiles online". SEO brutal.
-
-#### ✅ Buena arquitectura mixta (algunos temas sin relación)
-```
-midominio.com/
-   ├── /calculators/...        ← utilidades (carpeta)
-   ├── /converters/...         ← utilidades (carpeta)
-   ├── finance.midominio.com   ← finanzas (subdominio, tema distinto)
-   └── pets.midominio.com      ← mascotas (subdominio, tema distinto)
-```
-
-#### ❌ Mala arquitectura (todo mezclado en carpetas)
-```
-midominio.com/
-   ├── /mortgage-calculator    ← finanzas
-   ├── /dog-training           ← mascotas
-   ├── /chocolate-cake         ← cocina
-   └── /chatgpt-prompts        ← tecnología
-```
-Google ve un dominio "esquizofrénico" sin tema claro → **topical authority baja** → no rankea bien en NADA.
-
----
-
-<a name="multi-nicho"></a>
-## 4. ⚠️ ¿Varios nichos sin relación en un mismo dominio? (análisis honesto)
-
-> Dices que las páginas "no tienen nada que ver una con otra". Aquí te doy mi opinión sincera,
-> porque hay un **mito muy extendido** que conviene desmontar.
-
-### 4.1 El mito: "más páginas = más visitas = más dinero"
-
-❌ **FALSO.** Este es uno de los errores más comunes y cuesta meses/años a mucha gente.
-
-Google ya no posiciona por cantidad de páginas. Posiciona por **topical authority** (autoridad temática). Es decir:
-
-> Google pregunta: *"¿Es este sitio una AUTORIDAD reconocida en este tema?"*
->
-> - Si tu dominio habla de finanzas, mascotas, recetas e IA → Google responde: **NO es autoridad en nada**, es un cajón de sastre.
-> - Si tu dominio habla SOLO de calculadoras → Google responde: **SÍ, es la referencia en calculadoras**, lo posiciono arriba.
-
-### 4.2 ¿Qué pasa en la práctica si mezclo nichos sin relación?
-
-| Consecuencia | Impacto |
-|---|---|
-| Baja autoridad temática | Cada artículo cuesta mucho más en rankear |
-| Tráfico estancado | Las páginas no se impulsan mutuamente |
-| AdSense menos relevante | Anuncios menos segmentados = menos CPC |
-| Doble trabajo SEO | Tienes que construir autoridad para cada tema |
-| Dilución de marca | El usuario no identifica de qué va tu web |
-
-### 4.3 Entonces, ¿qué hacer con tu dominio?
-
-Tienes **3 caminos posibles** (ordenados de mejor a peor):
-
-#### 🥇 CAMINO 1 (RECOMENDADO): Elige un "nicho paraguas" amplio
-En vez de hacer "varias páginas sin relación", agrúpalas bajo un **tema amplio común**. Así sumas fuerza SEO y puedes meter muchas ideas dentro.
-
-**Ejemplos de nichos paraguas que lo aguantan TODO:**
-
-| Nicho paraguas | Páginas que entran dentro |
-|---|---|
-| 🧰 **"Online Tools & Utilities"** | Calculadoras, conversores, generadores, tablas, diccionarios → TODAS las herramientas de la sección NIVEL 1 caben aquí |
-| 📚 **"Reference & Education Hub"** | Diccionarios, significados (sueños, nombres, emojis), tablas, fechas, calendarios |
-| 💡 **"How-To & Tutorials"** | Tutoriales de IA, Excel, Android, guías paso a paso |
-| 🎉 **"Everyday Resources"** | Frases, mensajes, tarjetas, planificadores |
-
-> 💡 Con **"Online Tools & Utilities"** caben literalmente **20+ de las ideas del Nivel 1** en un solo dominio, todo en carpetas, todo sumando autoridad al mismo tema ("herramientas online útiles"). Es la jugada perfecta.
-
-#### 🥈 CAMINO 2: Subdominios para temas realmente distintos
-Si DE VERDAD quieres meter nichos que no pintan nada juntos (ej: finanzas + mascotas), usa subdominios:
-- `finance.midominio.com` (construye su autoridad aparte)
-- `pets.midominio.com` (otra autoridad aparte)
-- `tools.midominio.com` (utilidades)
-
-**Problema:** Cada subdominio es casi como empezar una web nueva en términos de SEO. Tendrás que construir backlinks y autoridad para cada uno.
-
-#### 🥉 CAMINO 3 (NO recomendado): Todo mezclado en carpetas
-Funciona a corto plazo (algo de tráfico fácil), pero a medio/largo plazo Google te frenará. Solo úsalo si te da igual el SEO y vas a vivir de tráfico social (Pinterest, TikTok, YouTube).
-
-### 3.4 (bis) Recomendación final personalizada para ti
-
-Dado que:
-- ✅ Quieres inglés como principal (altísimo RPM)
-- ✅ Quieres aprovechar un dominio único
-- ✅ Quieres varias páginas sin comprar más dominios
-- ✅ Buscas ingresos con AdSense
-
-**Mi recomendación clara:**
-
-```
-ELIGE EL NICHO PARAGUAS:  "Online Tools & Utilities"
-─────────────────────────────────────────────────────
 tudominio.com/
-   ├── /                (home: selector de categorías + inglés)
-   ├── /calculators/    (BMI, mortgage, loan, pregnancy, calories...)
-   ├── /converters/     (PDF, image, currency, units...)
-   ├── /generators/     (password, QR, lorem ipsum, color palette...)
-   ├── /dictionary/     (dreams, names, emojis...)
-   ├── /es/             (versión española opcional)
-   └── /fr/             (versión francesa opcional)
+├── /calculators/         ← todo suma autoridad de "tools"
+├── /converters/
+├── /generators/
+├── /dictionary/
+└── /es/, /fr/            ← versiones de idioma
 ```
 
-**Ventajas de esta arquitectura:**
-1. 🏆 Un solo tema claro → Google te ve como autoridad en "online tools".
-2. 💰 Inglés como base → RPM máximo.
-3. 🌍 Selector de idioma → resto del mundo también accede.
-4. 🧩 Puedes meter 30+ ideas dentro sin mezclar temas.
-5. 🔗 Los enlaces internos entre herramientas suman SEO mutuamente.
-6. 💵 Un solo dominio, un solo hosting, una sola cuenta AdSense.
+**Por qué:**
+- Google te ve como **autoridad en "online tools"**
+- Los enlaces internos entre herramientas se refuerzan entre sí
+- Una sola cuenta AdSense, un solo Analytics
 
-> 🎯 **Conclusión:** No hagas "muchas webs distintas en un dominio". Haz **una web de herramientas/utilidades** con muchas secciones. Es lo que mejor funciona para tu objetivo (inglés + un dominio + AdSense).
-
----
-
-<a name="nivel-1"></a>
-## 5. 🟢 NIVEL 1 — Páginas FÁCILES para AdSense (tráfico fácil)
-
-> Estas páginas **AdSense las aprueba sin problema**, son fáciles de crear y captan tráfico de búsqueda masivo.
-
-### 5.1 🔢 Calculadoras online
-**La joya de la corona.** Fácil, útil, tráfico recurrente y AdSense las adora.
-
-**Ideas concretas:**
-- Calculadora de IMC (índice de masa corporal)
-- Calculadora de calorías diarias
-- Calculadora de embarazo (semanas y meses)
-- Calculadora de nómina / salario neto
-- Calculadora de hipoteca y préstamos
-- Calculadora de interés compuesto
-- Calculadora de descuentos e IVA
-- Calculadora de notas / media universitaria
-- Calculadora de edad exacta
-- Conversor de unidades (km, mb, temperatura)
-- Calculadora de propinas
-- Calculadora de fertilidad / días fértiles
-- Calculadora de ovulación
-- Calculadora de CPF/CIF/IBAN (España)
-- Calculadora de cuota de préstamo coche
-- Calculadora de dias entre fechas
-- Calculadora de jubilación
-- Calculadora de prima de riesgo
-- Calculadora Bitcoin / cripto ganancias
-- Calculadora de pulgadas a centímetros
-
-**Ventajas:**
-- ✅ Tráfico enorme y recurrente
-- ✅ Bounce rate bajo (la gente usa la herramienta)
-- ✅ Se programan con HTML + JavaScript básico
-- ✅ CPC alto en finanzas, salud
-
-**Cómo monetizar:** AdSense + afiliados (bancos, seguros, productos salud).
+**No hagas:**
+```
+midominio.com/
+├── /finanzas/         ← tema
+├── /mascotas/         ← otro tema sin relación
+├── /recetas/          ← otro más
+└── /tecnologia/       ← y otro
+→ Google no entiende de qué va tu web → no rankea bien en nada
+```
 
 ---
 
-### 5.2 📝 Conversores y generadores
-- Conversor de PDF a Word / JPG a PDF
-- Generador de contraseñas seguras
-- Generador de códigos QR
-- Generador de nombres de usuario
-- Generador de hashtags
-- Conversor de YouTube a MP3 (¡ojo con copyright!)
-- Compresor de imágenes
-- Acortador de URLs
-- Generador de firmas de email
-- Generador de memes / texto sobre imagen
-- Generador de lorem ipsum
-- Generador de paletas de colores
-- Conversor de divisas en tiempo real
-- Traductor simple de jerga
-- Generador de textos para Instagram
+<a name="ia-base"></a>
+### 0.4 Cómo usar IA en TODO este proceso
+
+**La IA no es una herramienta de apoyo — es tu equipo completo.**
+
+| Rol | Lo hace la IA | Herramienta |
+|-----|--------------|-------------|
+| Redactor | Artículos, fichas, emails | ChatGPT, Claude |
+| Investigador | Keywords, nichos, competidores | Claude + Ahrefs |
+| Programador | Calculadoras, webs, scripts | Claude, Cursor, v0.dev |
+| Diseñador | Imágenes, logos, mockups | Midjourney, Ideogram, Canva IA |
+| Traductor | 5 idiomas en minutos | Claude, DeepL |
+| Community manager | Respuestas, posts, copies | ChatGPT |
+| Copywriter | Anuncios, páginas de venta | Claude |
+| Automatizador | Procesos repetitivos | Make, n8n |
+
+**Cómo distribuir tu tiempo:**
+```
+20% → Estrategia (qué hacer, qué keywords, qué producto)
+30% → Dirigir la IA (dar prompts, revisar, mejorar)
+30% → Distribuir (SEO, redes, email — llevar tráfico)
+20% → Optimizar (analizar datos, escalar lo que funciona)
+```
+
+**Los mejores prompts base:**
+
+Para artículos:
+```
+"Eres un experto en SEO. Escribe un artículo de 1.200 palabras
+en inglés sobre [TEMA]. Keyword principal: [KEYWORD].
+Estructura: H1, intro, 4 H2, cada H2 con 2-3 párrafos,
+conclusión con CTA. Tono: informativo y práctico."
+```
+
+Para investigar nichos:
+```
+"Dame 20 ideas de [tipo de herramienta/nicho] poco competidas
+que tengan volumen de búsqueda decente en inglés.
+Ordénalas de más a menos potencial. Para cada una indica:
+búsqueda mensual estimada, dificultad y por qué funciona."
+```
+
+Para vender un servicio:
+```
+"Actúa como copywriter. Escribe un email de prospección
+para ofrecer diseño web a [tipo de negocio local].
+El email debe: mencionar su situación actual,
+mostrar el beneficio concreto y terminar con CTA simple.
+Máximo 150 palabras."
+```
 
 ---
 
-### 5.3 🌱 Calendarios y fechas
-- Calendario lunar 2026
-- Calendario de siembra
-- Días festivos por país / comunidad
-- Calendario escolar
-- Calendario lunar para cortar pelo
-- Fases de la luna
-- Calendario de pagos / nominas
-- Calendario lunar para corte de pelo y depilación
-- Cuándo cae Semana Santa / Puente
+## BLOQUE 1 — WEBS DE CONTENIDO
 
-> 💡 Tráfico estacional MUY grande y poco competitivo en español.
+<a name="herramientas"></a>
+### 1.1 Herramientas online: calculadoras, conversores, generadores
 
----
+**Por qué son la mejor opción para empezar:**
+- Tráfico enorme y recurrente (la gente las usa una y otra vez)
+- AdSense las aprueba sin problema
+- La IA las programa (no necesitas saber código)
+- Bajo rebote (el usuario INTERACTÚA, no solo lee)
+- Inglés = keywords con alto volumen en todos los países
 
-### 5.4 🧮 Tablas e información fija de alta demanda
-- Tabla de tallas de ropa y zapatos
-- Códigos telefónicos internacionales
-- Códigos postales
-- Prefijos telefónicos por país
-- Códigos de colores HTML
-- Significado de los sueños (diccionario)
-- Significado de los nombres
-- Significado de los emojis
-- Códigos de error comunes (lavadora, TV, coche)
-- Horarios de misa
-- Horarios de bancos
-- Tabla de multiplicar / sumar
-- Poemas y frases para cumpleaños
-- Cartas de amor / amistad prediseñadas
-- Mensajes para Estados de WhatsApp
-- Mensajes de Navidad / Año Nuevo
-- Tabla nutricional de alimentos
-- Lista de puertos de red
+**Categorías y ejemplos:**
 
-**Ventajas:** contenido fácil de generar, keywords de "cola larga" (long tail) con tráfico masivo.
+| Categoría | Ideas concretas | Dificultad SEO |
+|-----------|----------------|---------------|
+| **Calculadoras financieras** | Mortgage, loan, interest, salary, tax | Media-alta |
+| **Calculadoras salud** | BMI, calories, pregnancy, ovulation | Media |
+| **Conversores** | PDF to Word, image compressor, currency | Baja-media |
+| **Generadores** | Password, QR code, color palette, lorem ipsum | Baja |
+| **Diccionarios/significados** | Dreams, names, emojis, slang | Baja |
+| **Tablas de datos** | Country codes, clothing sizes, HTML colors | Muy baja |
 
----
+**Cómo encontrar qué herramienta hacer (con IA):**
 
-### 5.5 📚 Diccionarios y glosarios
-- Diccionario de dreamajes (sueños)
-- Glosario de términos financieros
-- Glosario informático
-- Diccionario de siglas
-- Diccionario de modismos por país
-- Diccionario jurídico básico
-- Diccionario médico
-- Diccionario de marketing
+```
+Prompt 1 (buscar ideas):
+"Dame 30 ideas de calculadoras u herramientas web en inglés
+que tengan mucho tráfico de búsqueda pero poca competencia.
+Enfoque: herramientas de salud, finanzas o conversores.
+Para cada una pon: keyword principal, volumen estimado/mes,
+por qué tiene poco competencia y si encaja con AdSense."
 
----
+Prompt 2 (validar una idea):
+"Analiza si 'ovulation calculator' es un buen nicho para AdSense:
+- Volumen de búsqueda estimado
+- Dificultad de posicionamiento
+- RPM estimado
+- Competidores principales
+- Ángulo único para diferenciarse"
+```
 
-### 5.6 🎂 Generadores de contenido emocional
-- Frases de cumpleaños por edad
-- Mensajes de aniversario
-- Tarjetas virtuales imprimibles
-- Frases de agradecimiento
-- Mensajes de condolencias
-- Frases para baby shower
-- Mensajes de boda
-- Frases de buenas noches / buenos días
-- Estados graciosos para WhatsApp
+**Cómo programar una herramienta sin saber código:**
 
-> 💡 **Pico de tráfico en fechas señaladas.** Keyword volumen altísimo.
+```
+Prompt para Claude/Cursor:
+"Crea una calculadora de BMI en HTML, CSS y JavaScript puro.
+Que sea: responsive, bonita, moderna, con fondo claro,
+botón de calcular, resultado visual (con indicador de rango),
+explicación de qué significa el resultado.
+Sin dependencias externas. Todo en un único archivo HTML."
+```
+
+La IA genera el código completo en minutos. Tú lo copias, lo subes a WordPress como página.
+
+**Monetización por herramienta:**
+- AdSense en la página (encima y debajo de la herramienta)
+- Afiliados relacionados (calculadora hipoteca → banco afiliado)
+- Artículos de blog enlazados desde la herramienta (más tráfico)
 
 ---
 
-<a name="nivel-2"></a>
-## 6. 🟡 NIVEL 2 — Nichos rentables con AdSense (mayor CPC)
+<a name="blog-nicho"></a>
+### 1.2 Blog de nicho + AdSense
 
-> Requieren más contenido pero pagan MUCHO mejor por clic.
+Un blog sobre un tema específico donde monetizas con anuncios + afiliados.
 
-### 6.1 💼 Finanzas personales y economía
-- Cómo ahorrar dinero (guías semanales)
-- Mejores cuentas remuneradas
-- Comparativas de tarjetas
-- Inversión para principiantes
-- Criptomonedas explicadas
-- Guías de impuestos (IRPF, IVA)
-- Crowdfunding explicado
-- Fondos indexados
-- Planes de pensiones
-- Dinero para jubilados
-- Economía doméstica
-- Presupuesto familiar
+**Los nichos más rentables para empezar con IA:**
 
-**CPC:** Altísimo (1-5 $/clic). **Afiliados:** bancos, brókers, fintech.
+| Nicho | RPM | Dificultad | Idea de ángulo |
+|-------|-----|-----------|----------------|
+| **Finanzas personales** | 40-80 $ | Alta | "Para personas sin estudios financieros" |
+| **Tecnología/IA** | 20-40 $ | Media | "Tutoriales de IA para no técnicos" |
+| **Salud y nutrición** | 15-35 $ | Media | "Nutrición basada en evidencia" |
+| **Software reviews** | 20-40 $ | Media | "Reviews honestas de SaaS" |
+| **Viajes** | 10-25 $ | Media | "Destinos baratos en Europa" |
+| **Hogar/bricolaje** | 10-20 $ | Baja | "Reformas sin gastar mucho" |
 
----
-
-### 6.2 🏥 Salud y bienestar
-- Dietas y nutrición (guías)
-- Ejercicios para cada parte del cuerpo
-- Remedios naturales
-- Salud mental
-- Yoga y meditación guiada
-- Síntomas y enfermedades (con descargo médico)
-- Embarazo semana a semana
-- Menopausia
-- Salud infantil
-- Salud masculina
-- Vitaminas y suplementos
-
-> ⚠️ Google exige E-E-A-T (experiencia, expertise, autoridad, confianza). Usa redactor o colaborador médico en el about.
+**Cómo la IA trabaja en tu blog:**
+1. **Investigación:** "Dame 50 keywords long-tail de [nicho] con baja competencia en inglés"
+2. **Artículos:** La IA redacta el 80% → tú añades experiencia real y revisas
+3. **SEO on-page:** "Optimiza este artículo para la keyword [X]. Mejora el H1, añade FAQs al final"
+4. **Imágenes:** Canva IA o Ideogram para crear imágenes de portada únicas
+5. **Email:** ChatGPT escribe newsletters semanales
 
 ---
 
-### 6.3 💻 Tecnología y software
-- Reviews de software y apps
-- Tutoriales de Windows/Mac
-- Guías de IA (ChatGPT, Midjourney)
-- Comparativas de móviles
-- Mejores apps por categoría
-- Cómo hacer X en Excel
-- Trucos de Android/iOS
-- Noticias de gadgets
-- Configuración de routers
-- Guías de programación básica
-
----
-
-### 6.4 🏠 Hogar y bricolaje
-- Reformas y decoración
-- Huerto urbano
-- Limpieza del hogar (trucos)
-- Manualidades
-- Reciclaje y ecología
-- Ahorro energético
-- Feng shui
-- Organización del hogar
-- Reparaciones básicas
-
----
-
-### 6.5 ✈️ Viajes
-- Guías de ciudades
-- Itinerarios por país
-- Viajes económicos / mochileros
-- Tips de vuelos baratos
-- Seguros de viaje
-- Lugares secretos / ocultos
-- Viajes en familia
-- Rutas en coche
-- Camping y caravaning
-- Playas / montaña / turismo rural
-
-**Afiliados excelentes:** Booking, Skyscanner, seguros de viaje, alquiler coches.
-
----
-
-### 6.6 🐾 Mascotas
-- Cuidados por raza de perro/gato
-- Adiestramiento
-- Alimentación
-- Enfermedades comunes
-- Nombres para mascotas
-- Adopción
-- Acuarios y peces
-- Reptiles
-- Aves
-- Caballos
-
----
-
-### 6.7 👶 Parenting / Crianza
-- Embarazo semana a semana
-- Nombres de bebé
-- Desarrollo infantil por edad
-- Actividades para niños
-- Recetas infantiles
-- Educación en casa
-- Trastornos del aprendizaje
-- Pubertad y adolescencia
-
----
-
-### 6.8 🎓 Educación y formación
-- Recursos para oposiciones
-- Inglés gratis
-- Matemáticas paso a paso
-- Aprender a programar
-- Preparación Selectividad
-- Recursos para profesores
-- Apuntes universitarios
-- Idiomas
-- Estudiar en el extranjero
-
----
-
-<a name="nivel-3"></a>
-## 7. 🟠 NIVEL 3 — Otras formas de monetizar (más allá de AdSense)
-
-> AdSense es solo el principio. Combínalo con estas estrategias para multiplicar ingresos.
-
-### 7.1 🤝 Marketing de afiliados
-**El rey de los ingresos pasivos.** Recomienda productos, cobra comisión.
-
-**Programas recomendados:**
-- **Amazon Associates** (4-10% comisión)
-- **Hotmart** (productos digitales, hasta 80%)
-- **Awin / Commission Junction** (marcas grandes)
-- **ShareASale**
-- **Booking.com / Expedia** (viajes)
-- **Cursos online** (Domestika, Udemy)
-- **Hosting** (SiteGround, Hostinger — 50-100 $/venta)
-- **Software SaaS** (recurring, lo mejor)
-- **Fintech** (Revolut, N26, Bnext)
-
-**Nicho estrella para afiliados:** Reviews de software y comparativas.
-
----
-
-### 7.2 📧 Email marketing / Newsletter
-- Captura emails con un lead magnet (PDF gratis, plantilla, etc.)
-- Envía 1-2 emails/semana con valor + afiliados
-- Plataformas: **Mailchimp, Brevo, ConvertKit, Beehiiv**
-- Ingresos: venta directa, patrocinios, afiliados
-
-**Beehiiv** permite monetizar directamente con suscriptores de pago y red de anuncios propia.
-
----
-
-### 7.3 📚 Productos digitales propios
-- **Ebooks** (vende en Amazon KDP o tu web)
-- **Cursos online** (Hotmart, Teachable, Udemy)
-- **Plantillas** (Notion, Excel, Canva)
-- **Printables** (calendarios, planificadores)
-- **Preset de Lightroom**
-- **Stickers digitales**
-- **Stock fotográfico propio**
-- **Música/SFX** (AudioJungle, Pond5)
-- **Iconos / ilustraciones**
-- **Plugins / temas WordPress**
-
----
-
-### 7.4 🎓 Membresías y contenido premium
-- Patreon / YouTube Memberships
-- Área de miembros en tu web
-- Suscripción mensual a contenido
-- Comunidad privada (Discord, Circle, Skool)
-- Newsletters de pago (Substack, Beehiiv)
-
----
-
-### 7.5 🛒 E-commerce / Dropshipping
-- Tienda Shopify
-- Print on demand (Printful, Printify)
-- Productos digitales (sin stock ni envíos)
-- Dropshipping con AliExpress/Zendrop
-- Vendiendo artesanía (Etsy)
-
----
-
-### 7.6 🎥 YouTube + Web (sinergia)
-Crea canal de YouTube + blog relacionados. El blog captura tráfico SEO y YouTube capta el engagement. AdSense en ambos + afiliados.
-
----
-
-### 7.7 📝 Contenido patrocinado / Publis
-Cuando tengas tráfico, las marcas te pagan por posts patrocinados:
-- **150-500 €** post en blog pequeño (5k-20k visitas/mes)
-- **500-2000 €** blog mediano (50k+ visitas)
-- **2000-5000+ €** blog grande
-
-Plataformas: **Coobis, Blogfest, Getfluence, Outbrain**.
-
----
-
-### 7.8 🔧 Servicios / Freelance desde la web
-- Consultoría SEO
-- Diseño web
-- Redacción
-- Clases particulares
-- Coaching
-- Asesoría (fiscal, legal, nutrición)
-
----
-
-### 7.9 🤖 IA: herramientas como servicio
-- Generador de cartas con IA
-- Resumidor de textos
-- Traductor con IA
-- Generador de imágenes
-- Chatbot para webs
-- Creador de CV con IA
-- Analizador de fotos de interiorismo
-
-> 💡 Cobras suscripción (5-20 $/mes) o créditos. ¡Tendencia brutal en 2026!
-
----
-
-### 7.10 🎯 Venta de leads / contactos
-Generas formularios (seguros, hipotecas, reformas, clases) y vendes los contactos a empresas del sector. **3-50 € por lead.**
-
----
-
-### 7.11 📦 Amazon Influencer / Storefront
-Si creas contenido de reviews, abre una tienda Amazon Influencer y recomienda productos. Comisión sobre TODO lo que compren tras tu enlace durante 24h.
-
----
-
-### 7.12 🌐 Dominios y flipping de webs
-- Comprar dominios baratos y revender
-- Crear webs, hacerlas crecer y venderlas en **Flippa / Empire Flippers** (múltiplo 30-40x ingresos mensuales)
-
----
-
-<a name="nivel-4"></a>
-## 8. 🔴 NIVEL 4 — Modelos avanzados de mayor ingresos
-
-### 8.1 🏢 SaaS (Software as a Service)
-- Suscripción mensual
-- Ejemplos: herramienta de SEO, gestión de clientes, agenda online
-- Ingresos recurrentes escalables
-- Mayor inversión inicial pero MRR (ingresos recurrentes) alto
-
-### 8.2 🎓 Marketplaces educativos
-- Plataforma de cursos (cursos propios + de terceros)
-- Modelo Udemy propio de tu nicho
-
-### 8.3 🤝 Comunidades de pago (Skool / Circle)
-- Comunidad temática de pago (20-100 €/mes)
-- Networking + formación + soporte
-- Altamente escalable
-
-### 8.4 📱 Apps móviles
-- App gratuita con anuncios + versión PRO
-- Suscripciones in-app
-- Compras integradas
-
-### 8.5 🤖 Agentes de IA / Automatizaciones
-- Bots de WhatsApp para empresas
-- Automatizaciones con Make/n8n
-- Cobro por setup + mensualidad
-
-### 8.6 🏛️ Directorios premium
-- Directorio de proveedores B2B
-- Directorio de profesionales (abogados, dentistas)
-- Las empresas pagan para aparecer destacadas
-
----
-
-<a name="evitar"></a>
-## 9. 🚫 Qué EVITAR (AdSense rechaza o banea)
-
-### Contenido que AdSense NO aprueba:
-- ❌ Contenido copiado (plagio) o autogenerado por IA sin curar
-- ❌ Webs sin páginas legales (Aviso legal, Privacidad, Cookies)
-- ❌ Webs con poco contenido (mínimo 15-20 artículos de calidad)
-- ❌ Sitios en construcción o incompletos
-- ❌ Tráfico artificial o de bots
-- ❌ Nichos prohibidos: pornografía, violencia, apuestas, drogas, armas, copyright pirata
-- ❌ Atraer clics ("haz clic en los anuncios")
-- ❌ Más de 3 bloques de anuncios por página
-- ❌ Anuncios en páginas sin contenido (login, política...)
-
-### Lo que SÍ debes tener para que te aprueben:
-- ✅ Mínimo 20-30 artículos de 800-1500 palabras
-- ✅ Páginas legales obligatorias
-- ✅ Dominio propio (no subdominio gratuito tipo .wordpress.com)
-- ✅ Navegación clara (menús, categorías)
-- ✅ Imágenes propias o libres de derechos
-- ✅ Velocidad de carga decente
-- ✅ Versión móvil optimizada
-- ✅ Política de comentarios (si los tienes)
-- ✅ Página "Sobre nosotros" y "Contacto"
-
----
-
-<a name="adsense-requisitos"></a>
-## 10. 📝 Requisitos de AdSense 2026
-
-| Requisito | Detalle |
-|---|---|
-| Edad | +18 años |
-| Dominio | Propio (.com, .es, .net...) |
-| Contenido | Original, mínimo 20-30 posts |
-| Tráfico | No obligatorio, pero ayuda |
-| Idioma | Soportado (español ✅) |
-| Páginas legales | Sí, obligatorias |
-| Tiempo | Mínimo 3-6 meses activa (recomendado) |
-| Móvil | Debe verse bien |
-
-### Páginas legales obligatorias
-1. Aviso legal
-2. Política de privacidad
-3. Política de cookies (con banner GDPR)
-4. Términos y condiciones
-5. Sobre nosotros
-6. Contacto
-
----
-
-<a name="stack"></a>
-## 11. 🛠️ Stack técnico recomendado (fácil y gratis)
-
-### Opción A: WordPress (lo más fácil y recomendado) 🏆
-- **Hosting:** Hostinger (2-3 €/mes), SiteGround, Raiola
-- **Tema:** GeneratePress, Astra, Kadence (rápidos)
-- **Plugins clave:**
-  - Rank Math o Yoast SEO
-  - WP Rocket (caché)
-  - Ad Inserter (para AdSense)
-  - WPForms (formularios)
-  - Complianz (cookies GDPR)
-
-### Opción B: Static Site Generator (ultra rápido)
-- Astro / Next.js / Hugo
-- Hosting gratis en Vercel, Netlify, Cloudflare Pages
-- Markdown para artículos
-- Ventaja: velocidad brutal → SEO excelente
-
-### Opción C: No-code
-- Webflow, Framer, Carrd (para landing simple)
-- Beehiiv (newsletter + web integrada)
-- Notion + Super.so
-
-### Herramientas esenciales (todas con plan gratis)
-- 📊 **Google Analytics 4** y **Search Console** (gratuitos)
-- 🔍 **Ahrefs Free / Ubersuggest / Keyword Sheeter** (keywords)
-- 🎨 **Canva** (imágenes)
-- ✍️ **Grammarly / LanguageTool** (ortografía)
-- 🤖 **ChatGPT/Claude** (asistente de redacción — ¡no copies tal cual!)
-- 📸 **Unsplash / Pexels / Pixabay** (fotos gratis)
+<a name="encontrar-nicho"></a>
+### 1.3 Cómo encontrar tu nicho (el método completo con IA)
+
+**Paso 1 — Brainstorming con IA:**
+```
+"Soy una persona que trabaja solo desde casa.
+Quiero crear una web en inglés para monetizar con AdSense y afiliados.
+Dame 20 ideas de nicho para una web de herramientas o contenido:
+- Con tráfico de búsqueda alto
+- Poca competencia de sitios grandes
+- RPM o CPC alto
+- Que pueda manejar solo con IA
+Ordénalas de más a menos fácil."
+```
+
+**Paso 2 — Validar con herramientas gratuitas:**
+- **Google Trends:** ve si el nicho crece o baja
+- **Ubersuggest (gratis):** volumen y dificultad de keywords
+- **Ahrefs Free Keyword Generator:** 100 keywords gratis
+- **AnswerThePublic:** qué preguntan sobre ese tema
+
+**Paso 3 — Analizar competencia:**
+Busca en Google la keyword principal y mira los primeros resultados:
+- ¿Son webs enormes (Wikipedia, WebMD)? → muy difícil
+- ¿Son blogs medianos o pequeñas webs? → posible ganar
+- ¿Tienen muchos backlinks según Ahrefs? → decide
+
+**Paso 4 — El test de los 3 criterios:**
+```
+Un nicho es bueno si cumple LOS TRES:
+  ✅ Tiene búsquedas (>1.000/mes en keyword principal)
+  ✅ Tiene dinero (CPC > 0,50$ o buenos programas de afiliados)
+  ✅ Puedes competir (no está dominado por gigantes)
+```
+
+**Nichos "escondidos" con buen potencial (menos explotados):**
+- Calculadoras de impuestos por país específico
+- Significado de sueños en inglés (masivo, RPM decente)
+- Herramientas para profesiones concretas (abogados, electricistas)
+- Conversores de unidades técnicas (ingeniería, construcción)
+- Recursos para exámenes específicos (driving test, citizenship test)
 
 ---
 
 <a name="seo"></a>
-## 12. 📈 Estrategia de tráfico SEO paso a paso
+### 1.4 Estrategia SEO completa + plan 90 días
 
-### Paso 1: Investigación de keywords
-Usa herramientas como Ubersuggest o Ahrefs Keywords Generator. Busca:
-- **Volumen de búsqueda** > 500/mes
-- **Dificultad (KD)** < 20
-- **Intención informativa** (¿cómo, ¿qué, ¿cuándo)
+**El SEO con IA: lo que cambia y lo que no:**
 
-### Paso 2: Modelo "Hub & Spoke" (columna vertebral + satélites)
-- 1 artículo pilar (3000+ palabras) sobre un tema amplio
-- 10-20 artículos secundarios enlazados al pilar
+Lo que NO cambia: Google sigue valorando contenido útil, backlinks relevantes, velocidad y autoridad.
+Lo que SÍ cambia: puedes producir contenido de calidad 10x más rápido con IA (pero debes editarlo).
 
-### Paso 3: Publicar con frecuencia
-- 2-3 artículos por semana al inicio
-- Mínimo 800-1200 palabras por post
-- Optimiza título (H1), meta descripción, imágenes con ALT
+**El proceso SEO paso a paso:**
 
-### Paso 4: Construir enlaces (backlinks)
-- Comentarios en blogs del nicho (con valor)
-- Guest posts
-- Directorios temáticos
-- Foros (Reddit, foros del nicho)
-- Prensa / HARO
+**PASO 1 — Arquitectura del contenido (Semana 1)**
+```
+Prompt:
+"Para un blog sobre [nicho], diseña una estructura hub & spoke:
+- 1 artículo pilar principal (tema amplio, 3.000 palabras)
+- 10 artículos satélite (temas específicos, 1.000 palabras)
+- Para cada uno: título, keyword principal, intención de búsqueda"
+```
 
-### Paso 5: Distribución
-- Pinterest ( brutal para nichos femeninos: decoración, moda, recetas)
-- YouTube Shorts / TikTok (aunque no traiga SEO directo, sí marca)
-- Newsletter semanal
-- Grupos de Facebook (con permiso)
+**PASO 2 — Crear los artículos (Semana 2-4)**
 
-### Paso 6: Otras fuentes de tráfico
-- **Foros** (Reddit, Stack Exchange en tu nicho)
-- **Quora / Yahoo Answers** (respondes y enlazas)
-- **Pinterest** (tráfico enorme y duradero)
-- **YouTube** (vídeos que enlazan a tu blog)
-- **Newsletter cruzada** con otros blogs
+Proceso por artículo (30-45 min total):
+1. (5 min) Dar prompt a Claude con keyword y estructura
+2. (15 min) Revisar el borrador, añadir tu ángulo/experiencia
+3. (5 min) Optimizar H1, meta descripción, ALT de imágenes
+4. (5 min) Crear imagen con Canva IA o Ideogram
+5. (5 min) Publicar y enlazar desde otros artículos
 
----
+**Prompt para artículo:**
+```
+"Escribe un artículo de 1.200 palabras en inglés sobre [TEMA].
+Keyword principal: [KEYWORD]
+Estructura:
+- H1: título atractivo con keyword
+- Intro: 150 palabras con hook + promesa
+- 4 H2 con 2-3 párrafos cada uno
+- FAQ: 3 preguntas frecuentes al final
+- Conclusión con CTA
+Tono: útil, directo, sin relleno.
+Incluye datos o ejemplos concretos donde sea posible."
+```
 
-<a name="plan"></a>
-## 13. 📅 Plan de acción de 90 días
+**PASO 3 — SEO técnico (Semana 1, una vez)**
+- Instala Rank Math o Yoast SEO (gratuito)
+- Configura sitemap XML (automático con plugin)
+- Vincula Google Search Console
+- Activa compresión de imágenes (plugin Smush)
+- Velocidad: tema ligero (GeneratePress, Astra)
 
-### 🗓️ Mes 1 — Setup y contenido base
-- **Semana 1:** Elegir nicho (ver plantillas más abajo), comprar dominio + hosting, instalar WordPress
-- **Semana 2:** Configurar tema, plugins, páginas legales, Analytics y Search Console
-- **Semana 3-4:** Escribir 20 artículos iniciales (mezcla de pilar y long tail)
+**PASO 4 — Backlinks (Mes 2 en adelante)**
 
-### 🗓️ Mes 2 — Crecimiento
-- Publicar 3 artículos/semana
-- Investigar 30 keywords adicionales
-- Empezar Pinterest y 1 red social
-- Construir 10 backlinks
-- Aplicar a AdSense al final del mes
+Con IA puedes hacer este proceso en la mitad de tiempo:
+```
+Prompt (buscar sitios para hacer guest post):
+"Dame 20 blogs en el nicho de [tema] que:
+- Acepten guest posts
+- Tengan autoridad media-alta
+- Publiquen en inglés
+- No sean competidores directos"
+```
 
-### 🗓️ Mes 3 — Monetización
-- Activar AdSense
-- Añadir 2-3 programas de afiliados
-- Crear lead magnet y capturar emails
-- Publicar 3-4 artículos/semana
-- Analizar qué keywords funcionan y duplicar
+Estrategias de backlinks (de menos a más trabajo):
+1. Directorios de herramientas online (para webs de herramientas)
+2. Foros y Reddit (responder con valor, enlace cuando sea natural)
+3. Quora/Stack Exchange (responder preguntas del nicho)
+4. HARO (responder a periodistas que buscan fuentes)
+5. Guest posts (artículos en otros blogs)
 
-**Objetivo mes 3:** 5000-15000 visitas/mes → 50-300 $/mes.
+**PASO 5 — Distribución de tráfico adicional (Ongoing)**
 
-**Objetivo mes 6:** 30.000+ visitas/mes → 300-1500 $/mes.
+| Canal | Para qué nicho | Tiempo | Potencial |
+|-------|---------------|--------|-----------|
+| **Pinterest** | Cocina, hogar, manualidades, DIY | 30 min/semana | Enorme |
+| **Reddit** | Tech, finanzas, hobbies | 15 min/día | Muy bueno |
+| **YouTube faceless** | Cualquier nicho | 2-3h/semana | Muy alto |
+| **TikTok faceless** | Todos | 1h/semana | Alto |
+| **Newsletter** | Cualquiera | 1h/semana | Fidelización |
 
-**Objetivo mes 12:** 100.000+ visitas/mes → 1000-5000+ $/mes.
+**Plan de 90 días:**
 
----
+| Semana | Acción | Meta |
+|--------|--------|------|
+| 1 | Setup web, plugins, páginas legales, Search Console | Web publicada |
+| 2-4 | 20 artículos / herramientas (IA redacta, tú editas) | Contenido base listo |
+| 5-8 | 10 artículos más, primeros backlinks (directorios, foros) | 30 piezas de contenido |
+| 9-12 | 10 artículos, Pinterest, newsletter, aplicar AdSense | AdSense activo, primeras visitas |
 
-<a name="calculadora"></a>
-## 14. 📊 Calculadora de ingresos estimados
-
-| Visitas/mes | Nicho bajo (1-3$ RPM) | Nicho medio (10-25$ RPM) | Nicho alto (40-80$ RPM) |
-|---|---|---|---|
-| 1.000 | 1-3 $ | 10-25 $ | 40-80 $ |
-| 5.000 | 5-15 $ | 50-125 $ | 200-400 $ |
-| 10.000 | 10-30 $ | 100-250 $ | 400-800 $ |
-| 50.000 | 50-150 $ | 500-1.250 $ | 2.000-4.000 $ |
-| 100.000 | 100-300 $ | 1.000-2.500 $ | 4.000-8.000 $ |
-| 500.000 | 500-1.500 $ | 5.000-12.500 $ | 20.000-40.000 $ |
-
-> 💡 **Combinando AdSense + afiliados + email**, los ingresos suelen multiplicarse x2-x4.
-
----
-
-<a name="plantillas"></a>
-## 15. 🎯 Plantillas de nicho por orden de facilidad
-
-> Ranking final de los mejores nichos para empezar AHORA.
-
-### 🥇 TOP 10 Nichos fáciles + rentables (orden recomendado)
-
-| # | Nicho | Facilidad | RPM | Tráfico fácil | AdSense | Veredicto |
-|---|---|---|---|---|---|---|
-| 1 | **Calculadoras (finanzas/salud)** | ⭐⭐⭐⭐⭐ | Alto | Sí | ✅ | 🏆 EMPIEZA AQUÍ |
-| 2 | **Significado de sueños / nombres** | ⭐⭐⭐⭐⭐ | Bajo-Medio | Sí | ✅ | Tráfico brutal |
-| 3 | **Frases y mensajes (cumple, boda...)** | ⭐⭐⭐⭐⭐ | Bajo | Sí | ✅ | Muy fácil |
-| 4 | **Conversores/generadores útiles** | ⭐⭐⭐⭐ | Medio | Sí | ✅ | Recurrente |
-| 5 | **Cuidado de mascotas** | ⭐⭐⭐⭐ | Medio | Sí | ✅ | Apasionante |
-| 6 | **Recetas de cocina** | ⭐⭐⭐ | Bajo-Medio | Sí | ✅ | Mucho trabajo |
-| 7 | **Tecnología / IA tutoriales** | ⭐⭐⭐ | Alto | Medio | ✅ | Muy rentable |
-| 8 | **Finanzas personales** | ⭐⭐ | Muy alto | Medio | ✅ | Requiere rigor |
-| 9 | **Viajes (guías por destino)** | ⭐⭐⭐ | Medio | Sí | ✅ | Afiliados top |
-| 10 | **Salud / bienestar** | ⭐⭐ | Alto | Medio | ⚠️ (E-E-A-T) | Requiere experto |
+**Resultados esperados:**
+```
+Mes 3:  5.000-15.000 visitas → 50-300 $/mes
+Mes 6:  30.000-50.000 visitas → 500-2.000 $/mes
+Año 1:  100.000+ visitas → 2.000-8.000 $/mes (con afiliados + AdSense)
+```
 
 ---
 
-## 🏆 Recomendación final personalizada
+<a name="crecer-rapido"></a>
+### 1.5 Cómo crecer más rápido (tácticas avanzadas)
 
-Si eres **principiante y quieres resultados rápidos**, mi recomendación en orden:
+**Los 5 aceleradores que marcan la diferencia:**
 
-### 🥇 Opción 1: Web de calculadoras + diccionario
-- Calculadora de IMC, calorías, embarazo, hipoteca
-- + Diccionario de sueños o significado de nombres
-- **Por qué:** Tráfico masivo, fácil de programar, AdSense aprueba rápido, sin necesidad de ser experto.
+**1. Publicar más rápido (IA + sistema)**
+Crea una plantilla de artículo y un prompt estándar. Con práctica puedes publicar 1 artículo decente al día.
+```
+Plantilla de prompt guardada (la usas cada vez):
+"[Copia tu prompt estándar]. Keyword: [X]. Tema: [Y]."
+→ Tiempo por artículo: 30 min en lugar de 3 horas
+```
 
-### 🥈 Opción 2: Blog de frases y mensajes
-- Frases de cumpleaños, aniversario, bodas, Navidad
-- **Por qué:** Contenido fácil de crear, tráfico viral en redes, picos estacionales enormes.
+**2. Actualizar artículos existentes (mejor ROI que nuevos)**
+Google valora el contenido fresco. Cada 3-4 meses:
+```
+Prompt:
+"Este artículo tiene 8 meses. Actualiza:
+- Estadísticas y datos
+- Añade 2 secciones nuevas relevantes
+- Mejora la intro con hook más potente
+- Asegura que la keyword aparece de forma natural
+[Pega el artículo]"
+```
 
-### 🥉 Opción 3: Tutoriales de tecnología/IA
-- Tutoriales de ChatGPT, Midjourney, apps
-- **Por qué:** CPC altísimo, afiliados jugosos (software), tendencia creciente.
+**3. Construir autoridad de nicho (topical authority)**
+Google te posiciona mejor si cubres un tema EN PROFUNDIDAD.
+- 1 tema → mínimo 30-50 artículos relacionados
+- Enlaza artículos entre sí (internal linking)
+```
+Prompt:
+"Dame un mapa completo del nicho [X]:
+todos los subtemas, keywords, tipos de contenido.
+Organizado en pilares y satélites."
+```
 
-### 🚀 Opción 4 (más ambiciosa): Hub temático de finanzas o salud
-- **Por qué:** Mayor RPM del mercado, pero requiere más tiempo y rigor.
+**4. SEO programático (contenido en escala con IA)**
+Crea plantillas de páginas y genera contenido en masa para variaciones de un mismo tema.
+Ejemplo: "Calculadora de salario en [Ciudad]" → generas 50 páginas cambiando la ciudad.
 
----
-
-## 🔥 Lista final rápida de 100 ideas concretas de páginas
-
-<details>
-<summary>👉 Desplegar para ver las 100 ideas</summary>
-
-1. Calculadora de IMC
-2. Calculadora de calorías
-3. Calculadora de embarazo
-4. Calculadora de hipoteca
-5. Calculadora de préstamos
-6. Calculadora de nómina
-7. Calculadora de interés compuesto
-8. Calculadora de IVA y descuentos
-9. Calculadora de notas
-10. Calculadora de propinas
-11. Conversor de divisas
-12. Conversor de unidades
-13. Conversor de PDF
-14. Compresor de imágenes
-15. Generador de contraseñas
-16. Generador de códigos QR
-17. Generador de nombres de usuario
-18. Generador de hashtags
-19. Generador de lorem ipsum
-20. Generador de paletas de colores
-21. Diccionario de sueños
-22. Significado de nombres
-23. Significado de apellidos
-24. Significado de emojis
-25. Códigos telefónicos internacionales
-26. Códigos postales por ciudad
-27. Tabla de tallas de ropa
-28. Tabla de tallas de zapatos
-29. Códigos de error de electrodomésticos
-30. Horarios de bancos
-31. Frases de cumpleaños
-32. Frases de aniversario
-33. Frases de Navidad
-34. Frases de buenas noches
-35. Frases para WhatsApp
-36. Mensajes de condolencia
-37. Cartas de amor
-38. Poemas cortos
-39. Mensajes de agradecimiento
-40. Estados para Instagram
-41. Poemas para el Día de la Madre
-42. Mensajes de San Valentín
-43. Cartas para profesores
-44. Discursos de boda
-45. Nombres para bebés
-46. Nombres para perros
-47. Nombres para gatos
-48. Nombres para empresas
-49. Nombres para canales de YouTube
-50. Nombres para Instagram
-51. Apodos para amigos
-52. Apodos para juegos
-53. Recetas fáciles
-54. Recetas saludables
-55. Recetas vegetarianas
-56. Recetas sin gluten
-57. Menú semanal
-58. Tabla nutricional
-59. Dietas para bajar peso
-60. Dietas para ganar masa muscular
-61. Ejercicios en casa
-62. Rutinas de gimnasio
-63. Yoga para principiantes
-64. Meditación guiada
-65. Remedios naturales
-66. Cuidados del embarazo
-67. Desarrollo del bebé por meses
-68. Actividades infantiles
-69. Manualidades para niños
-70. Recetas infantiles
-71. Cuidados de perros por raza
-72. Cuidados de gatos
-73. Adiestramiento canino
-74. Enfermedades comunes en mascotas
-75. Nombres de mascotas
-76. Guías de viajes por ciudad
-77. Itinerarios de viaje
-78. Consejos para vuelos baratos
-79. Seguros de viaje
-80. Lugares secretos / ocultos
-81. Decoración del hogar
-82. Huerto urbano
-83. Manualidades para casa
-84. Feng shui
-85. Ahorro energético
-86. Tutoriales de Excel
-87. Trucos de Android
-88. Trucos de iPhone
-89. Reviews de apps
-90. Comparativas de móviles
-91. Guías de ChatGPT
-92. Guías de Midjourney
-93. Cómo invertir en bolsa
-94. Criptomonedas para principiantes
-95. Mejores cuentas remuneradas
-96. Cómo ahorrar dinero
-97. Guías de impuestos
-98. Recursos para oposiciones
-99. Apuntes de inglés
-100. Planificadores imprimibles
-
-</details>
+**5. Pinterest como fuente masiva de tráfico rápido**
+Para nichos visuales (hogar, cocina, bricolaje, estilo de vida):
+- Crea 3-5 pines por artículo con Canva IA
+- Publica todos los días con Tailwind (automatizado)
+- El tráfico de Pinterest llega en semanas, no meses como el SEO
 
 ---
 
-## 📚 Recursos y lecturas recomendadas
+## BLOQUE 2 — MONETIZACIÓN
 
-- **Backlinko** (blog de Brian Dean) — SEO de élite
-- **Ahrefs Blog** — keyword research avanzado
-- **Authority Hacker** — construir sitios de autoridad
-- **Niche Pursuits** — casos reales de nichos
-- **Income School** (YouTube) — metodología de blogs rentables
-- **Diggity Marketing** — nichos y SEO agresivo
+<a name="afiliados"></a>
+### 2.1 Afiliados PRO
+
+Recomiendas productos de otros, cobras comisión cuando alguien compra.
+**Ventaja:** no gestionas stock, envíos ni soporte.
+
+**Tipos de comisión (de mejor a peor):**
+
+| Tipo | Comisión | Recurrente | Lo mejor |
+|------|---------|-----------|----------|
+| **SaaS / Software** | 20-40% | ✅ Cada mes | Vendes una vez, cobras siempre |
+| **Cursos** | 30-80% | A veces | Tickets altos |
+| **Servicios financieros** | 50-200€/lead | No | CPA alto |
+| **Hosting** | 50-150€/venta | No | Fácil de recomendar |
+| **Amazon** | 1-10% | No | Volumen, poco margen |
+
+**Programas recomendados:**
+
+| Programa | Nicho | Comisión | Recurrente |
+|---------|-------|---------|-----------|
+| Hostinger / SiteGround | Tecnología, emprendimiento | 50-150€ | No |
+| NordVPN / ExpressVPN | Tech, privacidad | 30-40% | ✅ |
+| Semrush / Ahrefs | SEO, marketing | 30-40% | ✅ |
+| ClickFunnels / Kajabi | Marketing, negocios | 30-40% | ✅ |
+| Hotmart | Cursos digitales | 30-80% | A veces |
+| Booking / Skyscanner | Viajes | 4-8% | No |
+
+**Los 4 formatos que más convierten:**
+
+1. **Review en profundidad** — "Is [Herramienta] worth it? Honest review 2026"
+2. **Comparativa** — "[A] vs [B]: which one should you choose?"
+3. **"Best of"** — "7 best tools for [tarea específica]"
+4. **Tutorial que usa la herramienta** — "How to do X with [Herramienta]"
+
+**Cómo la IA crea estos contenidos:**
+```
+Prompt para review:
+"Escribe una review en inglés de [Producto/Servicio].
+Estructura:
+- Qué es y para quién es ideal (200 palabras)
+- Pros y contras en tabla
+- Características principales (con tabla comparativa)
+- Precios actuales
+- ¿Merece la pena? (conclusión honesta)
+- FAQ (3 preguntas)
+Tono: honesto, útil, no publicitario."
+```
+
+**El embudo completo:**
+```
+Tráfico (SEO + Pinterest + YouTube)
+        ↓
+Artículo de valor (review honesta)
+        ↓
+Enlace de afiliado + CTA natural
+        ↓
+Captura de email (lead magnet gratis)
+        ↓
+Secuencia de emails (IA los escribe)
+        ↓
+Comisiones recurrentes
+```
+
+**Cómo encontrar los mejores afiliados de tu nicho:**
+```
+Prompt:
+"Dame los 10 mejores programas de afiliados para el nicho de [X].
+Para cada uno: comisión, recurrente o no, cómo aplicar,
+qué tipo de audiencia necesitas."
+```
 
 ---
 
-## ✅ Checklist final para empezar hoy
+<a name="productos-digitales"></a>
+### 2.2 Productos digitales
 
-- [ ] Elegir 1 nicho de la lista
-- [ ] Comprar dominio + hosting
-- [ ] Instalar WordPress
-- [ ] Configurar tema y plugins básicos
-- [ ] Crear páginas legales (aviso legal, privacidad, cookies)
-- [ ] Configurar Analytics y Search Console
-- [ ] Escribir 20 artículos iniciales
-- [ ] Aplicar a AdSense
-- [ ] Añadir 2 programas de afiliados
-- [ ] Publicar 3 artículos/semana
-- [ ] Crear cuenta en Pinterest
-- [ ] Crear una newsletter
-- [ ] Revisar analítica mensualmente
-- [ ] Iterar lo que funciona
+**El modelo ideal para una persona sola:** creas una vez, vendes infinitas veces.
+
+| Ventaja | Detalle |
+|---------|---------|
+| 💰 Margen 90-100% | No pagas fabricación ni envío |
+| ♾️ Escala infinita | 1 o 10.000 ventas cuestan lo mismo |
+| 🤖 IA lo crea | Ebook en 1 día, plantilla en 2 horas |
+| 🔁 Combinable | Blog + email + redes → venden el producto |
+
+**Qué crear (de más a menos fácil con IA):**
+
+| Producto | IA lo hace | Tiempo | Precio | Dónde vender |
+|----------|-----------|--------|--------|--------------|
+| **Pack de prompts IA** | ✅ Totalmente | 2-4 horas | 5-20 € | Gumroad, tu web |
+| **Plantilla Excel/Sheets** | ✅ Fórmulas + diseño | 1 día | 5-25 € | Etsy, Gumroad |
+| **Printable** (planner, calendario) | ✅ Canva IA | 2-4 horas | 3-15 € | Etsy |
+| **Ebook / guía PDF** | ✅ Texto | 1-2 días | 7-30 € | Gumroad, Amazon KDP |
+| **Plantilla Notion** | Parcial | 1-2 días | 10-50 € | Gumroad, Etsy |
+| **Mini-curso** | ✅ Guion + voz IA | 3-5 días | 20-200 € | Hotmart, Teachable |
+
+**Proceso completo (idea → venta):**
+
+```
+PASO 1: Encontrar el problema (con IA)
+──────────────────────────────────────
+Prompt: "Dame 20 problemas concretos que tiene [audiencia]
+que se puedan resolver con una plantilla, guía o mini-curso.
+Ordénalos de más a menos urgentes/valiosos."
+
+PASO 2: Crear el producto (IA hace el 80%)
+──────────────────────────────────────────
+Ebook → Claude redacta capítulos, Canva diseña portada/interior
+Plantilla → ChatGPT genera estructura y fórmulas Excel
+Curso → Claude hace el guion, ElevenLabs narra, CapCut edita
+
+PASO 3: Página de venta (IA escribe el copy)
+────────────────────────────────────────────
+Prompt: "Escribe la página de venta de [producto] para [audiencia].
+Incluye: titular potente, problema que resuelve, qué contiene,
+para quién es, precio con justificación, FAQ, CTA."
+
+PASO 4: Distribuir (tráfico hacia la venta)
+────────────────────────────────────────────
+- Tu blog (artículos relacionados que enlazan al producto)
+- Email (lista → secuencia de venta automática)
+- Pinterest (pines del producto y del problema)
+- TikTok/Reels (vídeos que muestran el problema y la solución)
+```
+
+**Dónde venderlos:**
+
+| Plataforma | Comisión | Para qué |
+|-----------|---------|---------|
+| Gumroad | 10% | Todo tipo, fácil de usar |
+| Etsy | 6,5% + 0,20€/listing | Plantillas, printables |
+| Amazon KDP | 30-65% | Ebooks únicamente |
+| Hotmart | Variable | Cursos digitales |
+| Tu propia web | 0% | Máximo margen, pero tú traes tráfico |
 
 ---
 
-## 🎯 Conclusión
+<a name="pod"></a>
+### 2.3 Print on Demand
 
-> **No intentes hacer 10 webs. Haz 1 muy bien.**
+Vendes productos físicos sin tocar stock. La IA crea los diseños.
 
-La clave del éxito NO es el nicho perfecto (casi todos funcionan si se ejecutan bien), sino:
+**Cómo funciona:**
+```
+1. Diseño con IA (Midjourney/Ideogram) + Canva para adaptar
+2. Subes el diseño a plataforma POD
+3. Cliente compra → proveedor imprime y envía
+4. Tú cobras el margen sin hacer nada más
+```
 
-1. **Constancia** durante 6-12 meses.
-2. **Calidad** de contenido (no copies con IA sin curar).
-3. **SEO** bien hecho desde el principio.
-4. **Diversificación** de ingresos (AdSense + afiliados + email + productos propios).
+**Dónde vender:**
 
-**Empieza hoy.** El mejor nicho es el que empezaste ayer. 🚀
+| Plataforma | Ellos traen tráfico | Tu margen | Lo mejor para |
+|-----------|-------------------|-----------|--------------|
+| Redbubble | ✅ Sí | 10-30% | Empezar sin web |
+| Etsy | Parcial | 20-40% | Construir marca |
+| Amazon Merch | ✅ Sí | 10-40% | Volumen |
+| Printful + Shopify | ❌ (tú traes) | 30-60% | Marca propia |
+
+**Nichos que venden con POD:**
+- Profesiones con identidad (enfermeras, maestros, bomberos)
+- Hobbies específicos (pesca, montaña, gatos)
+- Humor de nicho (frases de programadores, ingenieros)
+- Fechas especiales (Día de la Madre, graduaciones)
+
+**Cómo la IA genera los diseños:**
+```
+Prompt Midjourney/Ideogram:
+"T-shirt design, minimalist style, [profesión] theme,
+funny quote: '[frase]', clean white background,
+suitable for print, high contrast, no gradients"
+```
+
+**Truco de nicho con IA:**
+```
+Prompt: "Dame 30 frases graciosas o motivadoras para camisetas
+dirigidas a [profesión]. Que sean en inglés, concisas,
+con personalidad y que alguien de esa profesión compraría."
+```
 
 ---
 
-*Documento creado el 22/06/2026 · Actualízalo con tus notas y progreso.*
+<a name="ecommerce"></a>
+### 2.4 E-commerce y Dropshipping
+
+**La verdad honesta en 2026:**
+
+| Modelo | Realidad actual |
+|--------|----------------|
+| Dropshipping genérico (AliExpress) | Saturado. Márgenes mínimos. Competidores de China con precios imposibles |
+| Dropshipping de nicho con proveedor europeo | Funciona si tienes presupuesto para ads (TikTok/Meta) |
+| Tienda de marca propia | Más difícil, más recompensante a largo plazo |
+| Dropshipping sin ads (solo SEO/orgánico) | Muy lento pero sin riesgo |
+
+**Los 4 modelos comparados:**
+
+| Modelo | Inversión | Margen | Riesgo | Recomendado |
+|--------|-----------|--------|--------|------------|
+| Productos digitales | ~0 | 90-100% | Muy bajo | ⭐⭐⭐⭐⭐ |
+| Print on Demand | Muy baja | 20-40% | Bajo | ⭐⭐⭐⭐ |
+| Dropshipping nicho | Media (ads) | 20-35% | Medio | ⭐⭐⭐ |
+| Stock propio | Alta | 30-50% | Alto | ⭐⭐ |
+
+**Si quieres hacer dropshipping:**
+
+Herramientas para encontrar productos:
+- **Minea / Pipiads:** ver qué anuncios están funcionando ahora mismo
+- **TikTok Creative Center:** productos virales
+- **Zendrop / BigBuy:** proveedores con envío desde España/Europa
+
+Cómo la IA te ayuda:
+```
+Prompt para fichas de producto:
+"Escribe una ficha de producto para Shopify en inglés de:
+[nombre del producto]. Incluye: título SEO optimizado,
+descripción de 200 palabras con beneficios (no características),
+3 bullet points de puntos clave, y respuesta a objeción
+principal del comprador."
+
+Prompt para guion de anuncio TikTok:
+"Escribe el guion de un anuncio TikTok de 30 segundos para [producto].
+Formato: gancho (3 seg) + problema (5 seg) + solución (10 seg) +
+prueba social (7 seg) + CTA (5 seg). Tono: natural, no publicitario."
+```
+
+---
+
+## BLOQUE 3 — SERVICIOS (Dinero ya)
+
+<a name="webs-servicio"></a>
+### 3.1 Webs como servicio: la agencia de una persona
+
+**El modelo más rápido para tus primeros euros.**
+Con IA entregas en días lo que antes tardaba semanas.
+
+**Qué puedes ofrecer y cuánto cobrar:**
+
+| Servicio | Precio | Tiempo entrega | Margen |
+|----------|--------|----------------|--------|
+| Web sencilla (5 páginas) | 350-700 € | 2-3 días | Alto |
+| Landing page | 200-450 € | 1 día | Muy alto |
+| Tienda online básica | 700-1.500 € | 3-5 días | Medio |
+| **Mantenimiento** | 50-150 €/mes | 2h/mes | ⭐ Recurrente |
+| **SEO local** | 200-500 €/mes | 4-6h/mes | ⭐ Recurrente |
+| Chatbot IA para su web | 400-900 € + 50€/mes | 1-2 días | Alto |
+| Automatización proceso | 300-800 € | 2-3 días | Alto |
+
+> 💡 **El negocio real está en lo recurrente:** 15 clientes × 100 €/mes = 1.500 €/mes sin hacer nada extra.
+
+**Cómo encontrar los primeros clientes (paso a paso):**
+
+**Canal 1: Negocios locales sin web (el más efectivo)**
+```
+1. Ve a Google Maps → busca [sector] en tu ciudad
+2. Identifica los que no tienen web o tienen una muy vieja
+3. Anótalos con teléfono o email
+4. Envía email o llama con este mensaje:
+```
+```
+Prompt para email de prospección:
+"Escribe un email corto para ofrecer diseño web a una
+[peluquería/fontanero/dentista] en [ciudad].
+Que: mencione que vi que no tienen web o la tienen antigua,
+explique el beneficio concreto (más clientes, reseñas, etc.),
+proponga una llamada de 15 min sin compromiso.
+Máximo 100 palabras. Tono cercano, no vendedor."
+```
+
+**Canal 2: Marketplaces**
+- Fiverr (inglés) — sube perfil con portfolio claro
+- Malt (España) — requiere historial pero paga bien
+- Workana (LATAM) — mucha demanda
+
+**Canal 3: Tu red personal**
+- Informa a conocidos: autónomos, familiares con negocio
+- Publica en tus redes qué ofreces
+- Pide referidos de tus primeros clientes (ofrece descuento)
+
+**Canal 4: Grupos de Facebook**
+- Busca grupos de autónomos, emprendedores, negocios de tu ciudad
+- No vendas directamente — ayuda, responde preguntas, sé útil
+- Cuando tengas credibilidad, menciona lo que ofreces
+
+**Stack de producción con IA:**
+
+| Paso | Herramienta IA | Tiempo |
+|------|---------------|--------|
+| Entrevista cliente | Formulario + ChatGPT analiza respuestas | 30 min |
+| Textos de la web | Claude escribe basándose en la entrevista | 30 min |
+| Diseño | Framer IA, v0.dev o WordPress Elementor | 1-3 horas |
+| Imágenes | Canva IA, Ideogram | 30 min |
+| SEO básico | Rank Math + ChatGPT meta descripciones | 30 min |
+
+**Cómo crecer como agencia solo:**
+
+```
+Mes 1-2: Primeros 2-3 clientes (aprendizaje, portfolio)
+Mes 3-4: 5-8 clientes activos + algunos con mantenimiento
+Mes 5-6: 10+ clientes, sistema estandarizado, ingresos estables
+Año 1:   Especialízate en un sector (ej: webs para restaurantes)
+         → más fácil vender, mejor reputación, cobras más
+```
+
+**Tip de especialización:**
+Elige UN sector (restaurantes, clínicas, abogados) y domínalo. Así:
+- Creas plantillas reutilizables (entregar en 1 día)
+- Construyes reputación específica
+- Los clientes te recomiendan entre sí (mismo sector)
+- Puedes cobrar más (eres "el experto en webs para X")
+
+---
+
+<a name="automatizaciones"></a>
+### 3.2 Automatizaciones y agentes IA como servicio
+
+**El modelo con menos competencia en 2026.**
+Las empresas quieren IA pero no saben implementarla. Tú les montas la solución.
+
+**Qué puedes vender:**
+
+| Servicio | Para quién | Precio | Tiempo |
+|----------|-----------|--------|--------|
+| Chatbot de atención web | Cualquier negocio | 400-900€ + 50€/mes | 1-2 días |
+| Bot WhatsApp (reservas/FAQs) | Restaurantes, clínicas, peluquerías | 500-1.200€ + 80€/mes | 2-3 días |
+| Automatizar proceso (ej: facturación) | Pymes | 400-1.000€ | 2-4 días |
+| Generador de contenido automático | Agencias | 300-700€ + cuota | 1-2 días |
+| Asistente IA sobre sus datos | Empresas con mucho documento | 800-2.000€ | 3-5 días |
+
+**Stack no-code (aprende esto y ya puedes vender):**
+- **Make / n8n:** conectar apps y automatizar flujos sin código
+- **Voiceflow:** construir chatbots con IA
+- **OpenAI API o Claude API:** el "cerebro" de la IA
+- **Airtable:** base de datos sencilla
+- **WhatsApp Business API + Twilio:** mensajería automática
+
+**Cómo encontrar clientes:**
+```
+El pitch más efectivo:
+"¿Cuánto tiempo pierdes al mes respondiendo las mismas
+preguntas por WhatsApp / email? Te lo automatizo en 2 días
+y no vuelves a perder ese tiempo."
+
+→ Negocios que SIENTAN ese dolor: restaurantes, clínicas,
+  inmobiliarias, academias, tiendas con mucho volumen de consultas.
+```
+
+**Cómo aprender a montarlo (en 1 semana):**
+1. Día 1-2: Tutorial de Make (gratis en YouTube)
+2. Día 3-4: Monta un chatbot con Voiceflow (plan gratis)
+3. Día 5: Conéctalo a la API de OpenAI/Claude
+4. Día 6-7: Monta el mismo sistema pero para un negocio ficticio como demo
+
+---
+
+<a name="faceless"></a>
+### 3.3 Contenido faceless con IA
+
+Crear canales de YouTube o TikTok sin dar la cara. La IA genera voz, guion e imágenes.
+
+**La verdad honesta:**
+- ✅ No necesitas salir tú
+- ✅ La IA acelera mucho la producción
+- ❌ Muy saturado — miles de canales hacen lo mismo
+- ❌ YouTube tarda 3-12 meses en monetizar (1.000 subs + 4.000h)
+- ❌ TikTok monetiza mal en España (necesitas cuenta EE.UU.)
+- ⚠️ Solo vale la pena si tienes un ángulo único
+
+**Formatos que funcionan:**
+
+| Formato | Nicho | Herramientas |
+|---------|-------|-------------|
+| Listas + voz IA | Curiosidades, finanzas | ElevenLabs + CapCut |
+| Tutorial en pantalla | Software, IA tools | Grabación pantalla + voz |
+| Historias Reddit | Drama, AITA, misterio | ChatGPT + ElevenLabs |
+| Avatar IA | Cualquiera | HeyGen, Synthesia |
+
+**Stack de producción:**
+
+| Paso | Herramienta | Tiempo |
+|------|------------|--------|
+| Guion | ChatGPT | 10 min |
+| Voz | ElevenLabs (5 min de audio gratis/mes) | 5 min |
+| Clips/imágenes | Pexels, Midjourney | 15 min |
+| Edición | CapCut (gratis) | 20-30 min |
+| Miniatura | Canva IA | 10 min |
+
+**Mi recomendación:** usa faceless como canal secundario para llevar tráfico a tu web y productos. No como modelo principal.
+
+---
+
+## BLOQUE 4 — REFERENCIA RÁPIDA
+
+<a name="stack-ia"></a>
+### 4.1 Stack completo de herramientas IA
+
+**Tu equipo virtual completo — casi todo con plan gratis:**
+
+| Rol | Herramienta | Gratis |
+|-----|------------|--------|
+| ✍️ Redactar/pensar | Claude, ChatGPT | ✅ |
+| 🌍 Traducir | DeepL, Claude | ✅ |
+| 🎨 Imágenes | Midjourney, Ideogram, Leonardo | Parcial |
+| 🖼️ Diseño | Canva IA | ✅ |
+| 💻 Programar webs | v0.dev, Cursor, Bolt | Parcial |
+| 🎙️ Voz IA | ElevenLabs, Murf | Limitado |
+| 🎬 Vídeo / avatar | HeyGen, CapCut, Runway | Parcial |
+| ⚙️ Automatizar | Make, n8n, Zapier | ✅ |
+| 💬 Chatbots | Voiceflow, Botpress | ✅ |
+| 🔍 SEO/keywords | Ubersuggest, Ahrefs Free | Limitado |
+| 📧 Email | Mailchimp, Brevo | ✅ |
+| 📊 Analytics | Google Analytics 4 | ✅ |
+
+> **Regla:** domina 4-5 herramientas a fondo antes de probar nuevas.
+> Base mínima: Claude + Canva + v0.dev + Make.
+
+---
+
+<a name="tabla-maestra"></a>
+### 4.2 Tabla maestra: todos los modelos comparados
+
+| Modelo | Inversión | 1er € | Dificultad | Pasivo | €/mes potencial | Rol IA principal |
+|--------|-----------|-------|-----------|--------|-----------------|-----------------|
+| Herramientas + AdSense | Muy baja | 3-6 meses | ⭐⭐ | ✅ | Programar herramientas | 100-5.000+ |
+| Blog + AdSense | Muy baja | 4-6 meses | ⭐⭐ | ✅ | Redactar artículos | 100-3.000+ |
+| Afiliados SaaS | Baja | 2-4 meses | ⭐⭐⭐ | ✅ | Reviews y comparativas | 200-10.000+ |
+| Productos digitales | ~0 | 1-2 meses | ⭐⭐ | ✅ | Crear el producto | 100-8.000+ |
+| Print on Demand | Muy baja | 1-3 meses | ⭐⭐ | 🟡 | Diseños con IA | 100-3.000 |
+| Dropshipping (nicho) | Media | 1-2 meses | ⭐⭐⭐⭐ | ❌ | Fichas + anuncios | 0-10.000 |
+| **Webs como servicio** | ~0 | **1-2 semanas** ⚡ | ⭐⭐⭐ | ❌ | Diseño + textos | 500-5.000+ |
+| **Automatizaciones IA** | ~0 | **2-4 semanas** ⚡ | ⭐⭐⭐ | 🟡 | Core del servicio | 500-8.000+ |
+| YouTube faceless | Baja | 3-8 meses | ⭐⭐⭐ | 🟡 | Guion + voz + vídeo | 0-5.000+ |
+| Newsletter de pago | Baja | 3-6 meses | ⭐⭐⭐ | 🟡 | Redactar | 100-5.000+ |
+| Micro-SaaS | Baja | 4-12 meses | ⭐⭐⭐⭐⭐ | ✅ | Programar todo | 500-50.000+ |
+
+---
+
+<a name="decision"></a>
+### 4.3 Árbol de decisión
+
+```
+¿Necesitas dinero ESTA semana?
+├─ SÍ → Webs como servicio (Sec. 3.1)
+│        o Automatizaciones IA (Sec. 3.2)
+│
+└─ NO → ¿Quieres ingreso PASIVO?
+        ├─ SÍ → ¿Tienes 0 dinero para invertir?
+        │       ├─ SÍ → Productos digitales (Sec. 2.2)
+        │       └─ NO → Web de herramientas (Sec. 1.1)
+        │                + Blog nicho (Sec. 1.2)
+        │
+        └─ NO → ¿Te gusta crear contenido visual?
+                ├─ SÍ → Print on Demand (Sec. 2.3)
+                │        o YouTube faceless (Sec. 3.3)
+                └─ NO → Afiliados (Sec. 2.1)
+```
+
+---
+
+<a name="checklists"></a>
+### 4.4 Quick-start de 3 pasos por modelo
+
+#### ⚡ Webs como servicio (1-2 semanas)
+```
+PASO 1 (Día 1-2):
+- Aprende WordPress básico (tutoriales YouTube, 4-6h)
+- Crea 1-2 webs de práctica (portfolio)
+- Elige especialización (restaurantes, autónomos, clínicas...)
+
+PASO 2 (Día 3-5):
+- Busca 30 negocios locales sin web (Google Maps)
+- Envía email personalizado con IA (10/día)
+- Prepara plantilla de web para tu sector elegido
+
+PASO 3 (Semana 2):
+- Primera llamada con interesado (descubre qué necesita)
+- Entrega la web en 2-3 días con IA
+- Cobra. Pide reseña y referido.
+```
+
+#### 📊 Web de herramientas + AdSense (3-6 meses)
+```
+PASO 1 (Semana 1):
+- Elige nicho (calculadoras financieras o de salud)
+- Compra dominio + hosting (Hostinger, 2€/mes)
+- Instala WordPress + Rank Math + Analytics
+
+PASO 2 (Semana 2-4):
+- Crea 10 herramientas con IA (Claude/v0.dev programa, tú subes)
+- Escribe 15 artículos de apoyo (IA redacta, tú editas)
+- Crea páginas legales (IA las genera)
+
+PASO 3 (Mes 2-3):
+- 10 artículos más, primeros backlinks (directorios)
+- Pinterest si nicho visual
+- Aplica a AdSense al llegar a 25-30 piezas de contenido
+```
+
+#### 📦 Productos digitales (1-2 meses)
+```
+PASO 1 (Día 1):
+- Identifica UN problema específico de UN público específico
+- Valida: ¿lo busca gente? ¿pagarían por solucionarlo?
+
+PASO 2 (Día 2-5):
+- Crea el producto con IA (ebook, plantilla, prompts)
+- Diseña la página de venta (Gumroad es gratis y fácil)
+- Escribe los textos con Claude
+
+PASO 3 (Semana 2-4):
+- 3-5 posts de blog relacionados que enlazan al producto
+- 5 pines en Pinterest sobre el problema/solución
+- Empieza a capturar emails (Mailchimp gratis hasta 500)
+```
+
+#### 🤝 Afiliados (2-4 meses)
+```
+PASO 1 (Semana 1):
+- Elige nicho con buenos programas SaaS
+- Apúntate a 3-5 programas de afiliados
+- Investiga 20 keywords de "intención de compra"
+
+PASO 2 (Semana 2-4):
+- Escribe 10 reviews y comparativas (IA redacta, tú editas)
+- Asegúrate de que cada artículo tiene CTA y enlace claro
+- Captura emails desde el primer día
+
+PASO 3 (Mes 2-4):
+- 5 artículos más, trabaja backlinks
+- Secuencia de emails (IA escribe 5-7 emails de nurturing)
+- Analiza qué convierte mejor y duplica
+```
+
+---
+
+## 🎯 RECOMENDACIÓN FINAL
+
+### El combo ganador (para una persona sola con IA)
+
+**🚀 MOTOR — dinero ahora:**
+Ofrece webs como servicio a negocios locales.
+- Empiezas en días, cobras en 1-2 semanas
+- 10 clientes con mantenimiento = 1.000 €/mes estables
+- La IA entrega en 1-2 días lo que antes tardaba una semana
+
+**🛰️ COHETE — pasivo a futuro (en paralelo):**
+Construye una web de herramientas en inglés + productos digitales.
+- Tarda 3-6 meses en arrancar
+- Luego genera dinero sin trabajar cada día
+- Cada nueva herramienta o artículo suma para siempre
+
+**Resultado a 12 meses (siendo constante):**
+```
+Motor (servicios):  1.000-3.000 €/mes
+Cohete (pasivo):    500-3.000 €/mes
+─────────────────────────────────────
+TOTAL:              1.500-6.000 €/mes
+```
+
+---
+
+## ✅ CHECKLIST DE INICIO
+
+- [ ] Decide tu modelo principal (servicios vs pasivo)
+- [ ] Si servicios: portfolio de 1-2 webs + buscar primeros clientes
+- [ ] Si pasivo: dominio + hosting + WordPress + páginas legales
+- [ ] Configura Google Analytics + Search Console
+- [ ] Crea cuenta en Claude y/o ChatGPT
+- [ ] Investiga tu nicho (Ubersuggest + Google Trends)
+- [ ] Crea tus primeras 10-20 piezas de contenido/herramientas
+- [ ] Empieza a capturar emails desde el día 1 (Mailchimp gratis)
+- [ ] Construye backlinks regularmente (3-5/semana)
+- [ ] Aplica a AdSense al llegar a 25-30 piezas
+- [ ] Añade 2-3 programas de afiliados relacionados
+- [ ] Revisa analytics mensualmente y optimiza lo que funciona
+
+---
+
+---
+
+## BLOQUE 5 — ARQUITECTURA PARA MÚLTIPLES PROYECTOS
+
+> Tienes un dominio (`zyrolin.com`) y quieres hacer **blogs de varios nichos, e-commerce,
+> dropshipping y herramientas**. Esta sección te explica cómo organizar todo eso de forma inteligente,
+> en qué orden lanzarlo y cómo gestionarlo solo con IA.
+
+<a name="subdominio-vs-carpeta"></a>
+### 5.1 La verdad: subdominio vs carpeta vs dominio propio
+
+Tres formas de organizar proyectos web. Cada una tiene consecuencias muy distintas en SEO.
+
+```
+OPCIÓN A — Carpeta (subdirectorio):     zyrolin.com/finanzas/
+OPCIÓN B — Subdominio:                  finanzas.zyrolin.com
+OPCIÓN C — Dominio propio:              finanzasblog.com
+```
+
+**Comparativa honesta:**
+
+| Criterio | Carpeta | Subdominio | Dominio propio |
+|----------|---------|-----------|----------------|
+| **Autoridad SEO heredada** | ✅ Toda | ❌ Ninguna (empieza en 0) | ❌ Ninguna |
+| **Topical authority** | ⚠️ Solo si temas relacionados | ⚠️ Independiente | ✅ 100% enfocado |
+| **Velocidad de rankear** | ✅ Rápida | ❌ Lenta | ❌ Lenta |
+| **Gestión técnica** | ✅ Una instalación | ⚠️ Una por subdominio | ⚠️ Una por dominio |
+| **Coste** | ✅ 0 extra | ✅ 0 extra | ⚠️ 10-15€/año por dominio |
+| **Nichos distintos sin contaminar** | ❌ Se mezclan | ✅ Separados | ✅ Completamente separados |
+| **AdSense** | ✅ Una cuenta | ✅ Misma cuenta (mismo raíz) | ⚠️ Necesita aprobación por dominio |
+| **Ideal cuando** | Temas relacionados | Negocios distintos con presupuesto | Nicho serio que vas a trabajar a fondo |
+
+**La regla más importante:**
+
+> Un subdominio en SEO se comporta **casi igual que un dominio nuevo**.
+> No hereda la autoridad del dominio raíz.
+> Hacer `finanzas.zyrolin.com` es como comprar un dominio nuevo, pero gratis.
+> La única diferencia: si `zyrolin.com` tiene mucha autoridad (Domain Rating alto),
+> el subdominio puede beneficiarse algo — pero en tus primeros 12 meses, esto es negligible.
+
+---
+
+<a name="todo-a-la-vez"></a>
+### 5.2 Quiero hacer de todo: cómo organizarlo sin romperte el SEO
+
+**La realidad brutal (pero necesaria):**
+
+```
+Quieres hacer:
+  ├─ Blog de finanzas
+  ├─ Blog de tecnología
+  ├─ Blog de otro nicho
+  ├─ E-commerce / dropshipping
+  └─ Herramientas / calculadoras
+
+Problema: son 5 proyectos distintos.
+Hacerlos a la vez = 5 proyectos mediocres.
+Hacerlos en secuencia con IA = 5 proyectos buenos.
+```
+
+**Pero hay buenas noticias:**
+
+Con IA puedes gestionar más proyectos que un humano solo sin ella.
+La clave es saber **qué automatizar** y **qué requiere tu atención real**.
+
+```
+Lo que la IA hace sola (con tus instrucciones):
+  ✅ Redactar artículos
+  ✅ Generar fichas de producto
+  ✅ Crear imágenes y diseños
+  ✅ Traducir contenido
+  ✅ Escribir emails
+  ✅ Programar herramientas
+
+Lo que SIEMPRE necesitas tú:
+  ⚠️ Decidir la estrategia de cada proyecto
+  ⚠️ Revisar y aprobar el contenido IA
+  ⚠️ Construir backlinks (no se puede automatizar bien)
+  ⚠️ Analizar datos y pivotar si algo no funciona
+  ⚠️ Gestionar clientes (si haces servicios)
+```
+
+**Cuántos proyectos puede gestionar una persona sola con IA:**
+
+| Fase | Proyectos activos realistas | Por qué |
+|------|-----------------------------|---------|
+| Meses 1-3 | **1** | Aprender los sistemas, montar la base |
+| Meses 4-6 | **2** | Ya tienes el sistema, lo replicas |
+| Meses 7-12 | **3-4** | Proyectos en piloto automático + nuevos |
+| Año 2+ | **5-8** | Sistemas automatizados, tú solo supervisas |
+
+---
+
+<a name="estrategia-dominios"></a>
+### 5.3 Estrategia de dominios para múltiples proyectos
+
+**El error típico:** meter todo en `zyrolin.com` con subdominios pensando que ahorra dinero.
+**La realidad:** los dominios cuestan 10-15€/año. Un dominio bien enfocado rankea mucho mejor
+que un subdominio sin autoridad.
+
+**Cuándo usar qué:**
+
+| Situación | Solución recomendada | Coste |
+|-----------|---------------------|-------|
+| Blog de nicho A + herramientas del mismo nicho | Todo en `zyrolin.com/` | 0 extra |
+| Blog de nicho A + blog de nicho B (sin relación) | Dominio separado para el segundo | 10-15€/año |
+| E-commerce sin relación con el blog | Dominio separado o subdominio | 10-15€/año o 0 |
+| E-commerce relacionado con el blog | Carpeta `zyrolin.com/shop/` | 0 extra |
+| Dropshipping (tienda nueva de nicho X) | Dominio descriptivo propio | 10-15€/año |
+
+**Dónde comprar dominios baratos:**
+- **Namecheap** — desde 8€/año, interfaz fácil
+- **Hostinger** — incluye dominio gratis con hosting
+- **Porkbun** — muy barato, renovaciones baratas
+
+**Ejemplo real de portfolio de proyectos bien organizado:**
+
+```
+AÑO 1:
+zyrolin.com           → Hub de herramientas + blog tech/IA (tu proyecto principal)
+                        Aquí concentras todo el SEO y la autoridad
+
+AÑO 1-2 (cuando el primero funcione):
+financetools.com      → Blog de finanzas dedicado (dominio descriptivo, posiciona mejor)
+                        10€/año, construye su propia autoridad de nicho
+
+AÑO 2 (cuando tengas ingresos):
+nichestore.com        → Tu tienda de dropshipping/e-commerce
+                        Dominio de marca, alimentado con ads o redes sociales
+
+AÑO 2+:
+petcareguide.com      → Blog de mascotas (otro nicho)
+techreviews.com       → Blog de reviews tech
+... (tantos como puedas gestionar)
+```
+
+**¿Y los subdominios de `zyrolin.com`?**
+
+Úsalos para proyectos donde:
+- No importa tanto el SEO (se alimentan de redes o ads)
+- Quieres probar algo sin gastar en dominio
+- Es un negocio independiente que luego podría tener dominio propio
+
+```
+shop.zyrolin.com  → Pruebas de dropshipping (ads, no SEO)
+tools.zyrolin.com → Herramientas (si quieres separarlo del blog)
+```
+
+---
+
+<a name="zyrolin-mapa"></a>
+### 5.4 El mapa completo: zyrolin.com + proyectos futuros
+
+**Arquitectura recomendada para tu visión de "hacer de todo":**
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PROYECTO 1 — Tu base principal (empieza aquí)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  zyrolin.com
+  ├── /tools/              Herramientas (calculadoras, conversores)
+  │   ├── /tools/bmi-calculator
+  │   ├── /tools/mortgage-calculator
+  │   └── /tools/password-generator
+  ├── /blog/               Blog del nicho elegido
+  │   ├── /blog/tech/      Artículos de tecnología/IA
+  │   └── /blog/finance/   Artículos de finanzas (si encajan)
+  ├── /shop/               Productos digitales (plantillas, ebooks)
+  └── /es/                 Versión en español (opcional)
+
+  Monetización: AdSense + afiliados SaaS + productos propios
+  Tiempo hasta ingresos: 3-6 meses
+  Potencial: 500-5.000 €/mes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PROYECTO 2 — Blog nicho B (meses 4-6)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  financeadvice.com  (o el nicho que elijas)
+  ├── /                    Home + artículos pilar
+  ├── /guides/             Guías en profundidad
+  ├── /tools/              Calculadoras específicas del nicho
+  └── /reviews/            Reviews + afiliados
+
+  Monetización: AdSense + afiliados financieros (CPC muy alto)
+  Tiempo hasta ingresos: 4-8 meses
+  Potencial: 500-8.000 €/mes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PROYECTO 3 — E-commerce / Dropshipping (mes 6-8)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  OPCIÓN A: shop.zyrolin.com (subdominio, 0€, sin SEO orgánico)
+  → Alimentado con TikTok organic + Meta Ads
+  → Bueno para probar un nicho sin gastar en dominio
+
+  OPCIÓN B: nichestore.com (dominio propio, 10€/año)
+  → Si el nicho es serio y quieres SEO a largo plazo
+  → Dominio descriptivo posiciona mejor para el nicho
+
+  Plataforma: Shopify (30€/mes) o WooCommerce (más barato)
+  Proveedor: Zendrop, BigBuy, Spocket (envío desde Europa)
+  Monetización: margen por venta (20-40%)
+  Potencial: 200-10.000 €/mes (depende de ads)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PROYECTO 4+ — Más blogs de nicho (año 2)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  petcaretips.com, travelguides.com, etc.
+  → Mismo sistema que Proyecto 2, nichos distintos
+  → Cada uno con dominio propio para máximo SEO
+  → La IA replica el sistema automáticamente
+```
+
+---
+
+<a name="orden-lanzamiento"></a>
+### 5.5 En qué orden lanzar cada proyecto (siendo solo con IA)
+
+**La secuencia correcta (la que maximiza ingresos totales):**
+
+```
+╔══════════════════════════════════════════════════════════╗
+║  MES 1-3: UN SOLO PROYECTO, FOCO TOTAL                    ║
+╠══════════════════════════════════════════════════════════╣
+║  zyrolin.com → herramientas + blog de 1 nicho             ║
+║                                                            ║
+║  Por qué: si lanzas 3 proyectos a la vez, los 3 van       ║
+║  lentos. Si lanzas 1, ese proyecto avanza rápido,         ║
+║  genera ingresos antes y te enseña el sistema.            ║
+╚══════════════════════════════════════════════════════════╝
+         ↓ (cuando tenga 30+ artículos y primeras visitas)
+╔══════════════════════════════════════════════════════════╗
+║  MES 4-6: LANZA EL SEGUNDO PROYECTO                       ║
+╠══════════════════════════════════════════════════════════╣
+║  Blog de nicho B en dominio propio (10€)                  ║
+║  Replica exactamente el sistema aprendido en Proyecto 1   ║
+║  La IA ya sabe qué hacer, tú supervisas 2 a la vez        ║
+╚══════════════════════════════════════════════════════════╝
+         ↓ (cuando el Proyecto 1 tenga AdSense aprobado)
+╔══════════════════════════════════════════════════════════╗
+║  MES 6-8: E-COMMERCE / DROPSHIPPING                       ║
+╠══════════════════════════════════════════════════════════╣
+║  shop.zyrolin.com o dominio propio                        ║
+║  Empieza con TikTok organic (0€ de ads) para validar      ║
+║  Si funciona, escala con Meta Ads                         ║
+╚══════════════════════════════════════════════════════════╝
+         ↓ (cuando el Proyecto 2 esté en marcha)
+╔══════════════════════════════════════════════════════════╗
+║  AÑO 2: ESCALA Y REPLICA                                  ║
+╠══════════════════════════════════════════════════════════╣
+║  Proyectos 3, 4, 5... mismo sistema en nuevos nichos      ║
+║  Los primeros proyectos generan ingresos solos            ║
+║  Tú solo supervisas y lanzas nuevos                       ║
+╚══════════════════════════════════════════════════════════╝
+```
+
+**Cuánto tiempo requiere cada proyecto por semana (con IA):**
+
+| Proyecto | Fase arranque | Fase crucero (ya rodando) |
+|----------|--------------|--------------------------|
+| Blog de nicho | 10-15h/semana | 3-5h/semana |
+| Web herramientas | 8-12h/semana | 1-2h/semana |
+| E-commerce/dropshipping | 15-20h/semana | 5-10h/semana |
+
+**Con IA, estos tiempos se reducen a la mitad.**
+
+---
+
+<a name="gestionar-varios"></a>
+### 5.6 Cómo gestionar varios proyectos a la vez con IA
+
+Cuando tengas 2-3 proyectos activos, necesitas sistemas para no volverte loco.
+
+**Sistema de gestión semanal (4-5h por proyecto):**
+
+```
+LUNES: Proyectos de contenido (blogs)
+  → Claude genera 3 borradores de artículos
+  → Tú revisas y publicas
+  → 1h por proyecto
+
+MARTES: SEO y distribución
+  → Comprueba Analytics y Search Console
+  → Publica en Pinterest (Canva IA crea los pines)
+  → Responde comentarios y foros
+  → 30-45 min por proyecto
+
+MIÉRCOLES: E-commerce
+  → Revisa pedidos, incidencias, preguntas
+  → Añade nuevos productos (IA genera fichas)
+  → Analiza qué vende
+  → 1-2h
+
+JUEVES: Backlinks y crecimiento
+  → Comenta en blogs del nicho
+  → Responde en Reddit/Quora
+  → 30 min por proyecto
+
+VIERNES: Revisión y estrategia
+  → Qué funcionó esta semana
+  → Qué hacer la semana que viene
+  → 30-45 min total
+```
+
+**Herramientas para gestionar varios proyectos:**
+
+| Necesidad | Herramienta | Por qué |
+|-----------|------------|---------|
+| Planificación de contenido | Notion o Trello | Ver todos los proyectos de un vistazo |
+| Publicación programada | Buffer o Publer | Publicar en redes de todos los proyectos desde un sitio |
+| Analytics centralizado | Google Analytics 4 | Puedes tener múltiples propiedades |
+| Contraseñas y accesos | Bitwarden (gratis) | Gestionar logins de todos los proyectos |
+| Automatizar tareas repetitivas | Make (ex-Integromat) | Un flujo publica en varias redes automáticamente |
+
+**El sistema de IA por proyecto (copia y pega esto):**
+
+```
+Para cada proyecto, crea un "System Prompt" base en Claude:
+
+"Eres el gestor de contenido de [NOMBRE DEL PROYECTO].
+El sitio es: [URL]
+El nicho es: [NICHO]
+La audiencia es: [AUDIENCIA]
+El tono es: [TONO]
+La keyword strategy es: [KEYWORDS PRINCIPALES]
+Los programas de afiliados son: [AFILIADOS]
+
+Cuando te pida contenido, sigue siempre estas pautas..."
+
+→ Guarda este prompt. Cada vez que abras Claude para ese proyecto,
+  pégalo al principio. La IA "recuerda" el contexto de ese proyecto.
+```
+
+**Señales de que un proyecto está en "piloto automático":**
+- Genera visitas sin que publiques nada nuevo
+- AdSense paga todos los meses sin intervención
+- Los afiliados generan comisiones de artículos de hace meses
+- Solo necesitas 1-2h/semana para mantenerlo
+
+Cuando un proyecto llega aquí, tienes tiempo libre para lanzar el siguiente.
+
+---
+
+**📅 Actualizado: Junio 2026 · Versión 3.0**
+
+> **La clave no es el nicho perfecto — es empezar hoy y ser constante 6-12 meses.**
+> La IA acelera todo, pero no elimina el tiempo de posicionamiento.
+> Empieza por lo que da dinero rápido (servicios) y construye lo pasivo en paralelo.

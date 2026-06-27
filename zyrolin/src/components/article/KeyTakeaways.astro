@@ -1,0 +1,33 @@
+---
+import Icon from '../Icon.astro';
+
+// A highlighted "key takeaways" / TL;DR box shown near the top of an article.
+// Populated from the optional `keyTakeaways` frontmatter array.
+interface Props {
+  items: string[];
+  label?: string;
+}
+const { items, label = 'Key takeaways' } = Astro.props;
+---
+
+<aside
+  class="my-7 rounded-[var(--radius-card)] border border-line bg-surface p-5"
+  style="border-left: 3px solid var(--color-brand)"
+>
+  <p class="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-muted">
+    <Icon name="sparkles" size={14} class="text-gold" />
+    {label}
+  </p>
+  <ul class="space-y-2.5">
+    {
+      items.map((it) => (
+        <li class="flex gap-2.5 leading-relaxed text-fg-soft">
+          <span class="mt-0.5 shrink-0 text-brand">
+            <Icon name="check" size={17} />
+          </span>
+          <span>{it}</span>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

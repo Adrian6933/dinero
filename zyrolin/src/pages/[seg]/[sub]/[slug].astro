@@ -1,0 +1,56 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleView from '../../../components/views/ArticleView.astro';
+import {
+  getPublishedArticles,
+  articleLang,
+  articleSlug,
+  getArticleTranslations,
+  type Article,
+} from '../../../utils/articles';
+import {
+  LOCALES,
+  DEFAULT_LOCALE,
+  localizedPath,
+  type Locale,
+} from '../../../i18n/ui';
+
+// Localized articles: /<locale>/<category>/<slug>
+export const getStaticPaths = (async () => {
+  const all = await getPublishedArticles();
+  const localized = all.filter((a) => articleLang(a) !== DEFAULT_LOCALE);
+  return localized.map((article) => ({
+    params: {
+      seg: articleLang(article),
+      sub: article.data.category,
+      slug: articleSlug(article),
+    },
+    props: { article },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  article: Article;
+}
+const { article } = Astro.props as Props;
+const lang = articleLang(article);
+
+const translations = await getArticleTranslations(article);
+const localePaths: Partial<Record<Locale, string>> = {};
+for (const loc of LOCALES) {
+  localePaths[loc] =
+    translations[loc] ?? localizedPath(loc, article.data.category);
+}
+---
+
+<BaseLayout
+  title={article.data.title}
+  description={article.data.description}
+  article={true}
+  publishedTime={article.data.pubDate.toISOString()}
+  modifiedTime={(article.data.updatedDate ?? article.data.pubDate).toISOString()}
+  localePaths={localePaths}
+>
+  <ArticleView article={article} lang={lang} />
+</BaseLayout>

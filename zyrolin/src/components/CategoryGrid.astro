@@ -1,0 +1,65 @@
+---
+import Icon from './Icon.astro';
+import { CATEGORIES, categoryIcon } from '../data/categories';
+import { getCategoryCounts } from '../utils/articles';
+import { localizedCategory } from '../i18n/categories';
+import { useTranslations, localizedPath, DEFAULT_LOCALE, type Locale } from '../i18n/ui';
+
+interface Props {
+  maxTier?: 1 | 2 | 3;
+  limit?: number;
+  hideEmpty?: boolean;
+  lang?: Locale;
+}
+const { maxTier = 3, limit, hideEmpty = false, lang = DEFAULT_LOCALE } =
+  Astro.props;
+const t = useTranslations(lang);
+
+const counts = await getCategoryCounts(lang);
+
+let cats = CATEGORIES.filter((c) => c.tier <= maxTier);
+if (hideEmpty) cats = cats.filter((c) => (counts[c.slug] ?? 0) > 0);
+
+// Most-developed categories lead — lets categories grow at different speeds
+// without the grid looking unfinished.
+cats = cats.sort((a, b) => (counts[b.slug] ?? 0) - (counts[a.slug] ?? 0));
+if (limit) cats = cats.slice(0, limit);
+---
+
+<div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+  {
+    cats.map((cat) => {
+      const count = counts[cat.slug] ?? 0;
+      const loc = localizedCategory(cat.slug, lang)!;
+      return (
+        <a
+          href={localizedPath(lang, cat.slug)}
+          class="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface p-5 transition duration-200 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl hover:shadow-brand/10"
+          style={`--cat:${cat.accent}`}
+        >
+          <span
+            class="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full opacity-0 blur-2xl transition group-hover:opacity-60"
+            style={`background:${cat.accent}`}
+          />
+          <span
+            class="flex h-12 w-12 items-center justify-center rounded-xl"
+            style={`background:color-mix(in oklab, ${cat.accent} 16%, transparent); color:${cat.accent}`}
+          >
+            <Icon name={categoryIcon(cat.slug)} size={22} />
+          </span>
+          <span class="mt-4 font-display text-base font-bold text-fg transition group-hover:text-[var(--cat)]">
+            {loc.name}
+          </span>
+          <span class="mt-1 line-clamp-2 text-xs leading-relaxed text-muted">
+            {loc.blurb}
+          </span>
+          <span class="mt-4 text-xs font-medium text-muted">
+            {count > 0
+              ? `${count} ${count === 1 ? t('category.guide') : t('category.guides')}`
+              : t('category.comingSoon')}
+          </span>
+        </a>
+      );
+    })
+  }
+</div>

@@ -1,0 +1,63 @@
+---
+// Fixed "skyscraper" ad rails pinned to both sides of the viewport. They only
+// appear on very wide screens (≥1500px) so they never overlap the centered
+// content (max-width ~1152px). Replace the inner placeholder with your AdSense
+// 160×600 unit once approved. Keep total ad units per page within policy.
+const SHOW = true;
+---
+
+{
+  SHOW && (
+    <div class="side-rails" aria-hidden="true">
+      <aside class="rail rail-left">
+        <span class="rail-label">Advertisement</span>
+      </aside>
+      <aside class="rail rail-right">
+        <span class="rail-label">Advertisement</span>
+      </aside>
+    </div>
+  )
+}
+
+<style>
+  .side-rails {
+    display: none;
+  }
+
+  .rail {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--color-line);
+    border-radius: 0.75rem;
+    background: color-mix(in oklab, var(--color-surface) 60%, transparent);
+    z-index: 30;
+  }
+
+  .rail-left {
+    left: 1.25rem;
+  }
+  .rail-right {
+    right: 1.25rem;
+  }
+
+  .rail-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  /* Only show when there's room beside the 1152px content column. */
+  @media (min-width: 1500px) {
+    .side-rails {
+      display: block;
+    }
+  }
+</style>

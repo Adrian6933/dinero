@@ -1,0 +1,147 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import SearchModal, { type SearchItem } from './SearchModal.tsx';
+import { getCategory } from '../data/categories';
+import { localizedCategory } from '../i18n/categories';
+import { getPublishedArticles, articleUrl } from '../utils/articles';
+import { useTranslations, localizedPath, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+  localePaths: Record<Locale, string>;
+}
+const { locale, localePaths } = Astro.props;
+const t = useTranslations(locale);
+
+const navItems = [
+  { slug: 'ai', label: 'AI' },
+  { slug: 'tech', label: 'Tech' },
+  { slug: 'money', label: 'Money' },
+  { slug: 'recipes', label: 'Recipes' },
+  { slug: 'categories', label: t('nav.allTopics') },
+];
+const home = localizedPath(locale, '');
+
+// Build the search index for this language (used by the command-palette modal).
+const articles = await getPublishedArticles(locale);
+const searchItems: SearchItem[] = articles.map((a) => {
+  const cat = getCategory(a.data.category);
+  return {
+    title: a.data.title,
+    url: articleUrl(a),
+    category: a.data.category,
+    categoryName: localizedCategory(a.data.category, locale)?.name ?? a.data.category,
+    accent: cat?.accent ?? '#9387ff',
+    description: a.data.description,
+    tags: a.data.tags,
+  };
+});
+---
+
+<header class="sticky top-0 z-40 border-b border-line bg-bg/70 backdrop-blur-xl">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
+    <a href={home} aria-label="Zyrolin home">
+      <Logo />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden items-center gap-1 md:flex">
+      {
+        navItems.map((item) => (
+          <a
+            href={localizedPath(locale, item.slug)}
+            class="rounded-lg px-3 py-2 text-sm font-medium text-fg-soft transition hover:bg-surface-2 hover:text-fg"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <!-- Search trigger (opens the command palette) -->
+      <button
+        type="button"
+        data-open-search
+        class="flex items-center gap-2 rounded-full border border-line py-2 pl-3.5 pr-2 text-sm text-muted transition hover:border-brand hover:text-fg"
+        aria-label={t('nav.search')}
+      >
+        <Icon name="search" size={16} />
+        <span class="hidden lg:inline">{t('nav.search')}</span>
+        <kbd
+          class="hidden rounded border border-line px-1.5 py-0.5 text-[0.65rem] font-medium lg:inline"
+          >⌘K</kbd
+        >
+      </button>
+
+      <LanguageSwitcher current={locale} paths={localePaths} />
+
+      <button
+        id="theme-toggle"
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-line text-fg-soft transition hover:border-brand hover:text-fg"
+        aria-label="Toggle light/dark theme"
+      >
+        <span class="theme-icon-dark"><Icon name="sun" size={18} /></span>
+        <span class="theme-icon-light"><Icon name="moon" size={18} /></span>
+      </button>
+
+      <button
+        id="menu-toggle"
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-line text-fg-soft md:hidden"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <Icon name="menu" size={20} />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="hidden border-t border-line bg-bg px-4 py-3 md:hidden">
+    {
+      navItems.map((item) => (
+        <a
+          href={localizedPath(locale, item.slug)}
+          class="block rounded-lg px-3 py-2.5 text-base font-medium text-fg-soft transition hover:bg-surface-2"
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<!-- Command-palette search, mounted once and available site-wide -->
+<SearchModal items={searchItems} placeholder={t('hero.searchPlaceholder')} client:load />
+
+<script>
+  // Mobile menu
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Theme toggle (persisted; dark is default)
+  const themeBtn = document.getElementById('theme-toggle');
+  themeBtn?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {
+      /* ignore */
+    }
+  });
+
+  // Any element with [data-open-search] opens the command palette
+  document.querySelectorAll('[data-open-search]').forEach((el) => {
+    el.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('zyrolin:open-search'));
+    });
+  });
+</script>

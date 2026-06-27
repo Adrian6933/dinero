@@ -1,0 +1,95 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import CoverImage from './CoverImage.astro';
+import type { Article } from '../utils/articles';
+import { articleUrl, articleSlug, readingTime, formatDate } from '../utils/articles';
+import { categoryIcon } from '../data/categories';
+import { localizedCategory } from '../i18n/categories';
+import { useTranslations, DEFAULT_LOCALE, type Locale } from '../i18n/ui';
+
+interface Props {
+  article: Article;
+  compact?: boolean;
+  lang?: Locale;
+}
+const { article, compact = false, lang = DEFAULT_LOCALE } = Astro.props;
+const t = useTranslations(lang);
+
+const category = localizedCategory(article.data.category, lang);
+const accent = category?.accent ?? '#9387ff';
+const icon = categoryIcon(article.data.category);
+const url = articleUrl(article);
+const minutes = readingTime(article);
+const dateStr = formatDate(article.data.pubDate, lang);
+---
+
+{
+  compact ? (
+    <a
+      href={url}
+      class="group flex items-center gap-3.5 rounded-xl px-3 py-3 transition hover:bg-surface-2"
+    >
+      <span
+        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+        style={`background:color-mix(in oklab, ${accent} 16%, transparent); color:${accent}`}
+      >
+        <Icon name={icon} size={18} />
+      </span>
+      <span class="min-w-0 flex-1">
+        <span class="block truncate font-medium text-fg transition group-hover:text-brand">
+          {article.data.title}
+        </span>
+        <span class="block text-xs text-muted">
+          {category?.name} · {dateStr}
+        </span>
+      </span>
+      <span class="text-muted transition group-hover:translate-x-0.5 group-hover:text-brand">
+        <Icon name="arrow-right" size={16} />
+      </span>
+    </a>
+  ) : (
+    <a
+      href={url}
+      class="group flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface transition duration-200 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl hover:shadow-brand/10"
+    >
+      <div class="relative">
+        {article.data.cover ? (
+          <Image
+            src={article.data.cover}
+            alt={article.data.coverAlt ?? article.data.title}
+            width={640}
+            height={360}
+            class="aspect-[16/9] w-full object-cover"
+          />
+        ) : (
+          <CoverImage
+            category={article.data.category}
+            slug={articleSlug(article)}
+            accent={accent}
+            name={category?.name}
+            width={640}
+          />
+        )}
+        <span
+          class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium backdrop-blur"
+          style={`background:color-mix(in oklab, ${accent} 22%, #000 40%); color:#fff`}
+        >
+          <Icon name={icon} size={12} /> {category?.name}
+        </span>
+      </div>
+      <div class="flex flex-1 flex-col p-5">
+        <h3 class="font-display text-lg font-bold leading-snug text-fg transition group-hover:text-brand">
+          {article.data.title}
+        </h3>
+        <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">
+          {article.data.description}
+        </p>
+        <span class="mt-4 flex items-center gap-1.5 text-xs text-muted">
+          <Icon name="clock" size={13} />
+          {minutes} {t('card.readTime')} · {dateStr}
+        </span>
+      </div>
+    </a>
+  )
+}

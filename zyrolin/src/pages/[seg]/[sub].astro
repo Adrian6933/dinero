@@ -1,0 +1,121 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryView from '../../components/views/CategoryView.astro';
+import ArticleView from '../../components/views/ArticleView.astro';
+import CategoryGrid from '../../components/CategoryGrid.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { CATEGORIES } from '../../data/categories';
+import { localizedCategory } from '../../i18n/categories';
+import {
+  getPublishedArticles,
+  articleSlug,
+  getArticleTranslations,
+  type Article,
+} from '../../utils/articles';
+import {
+  LOCALES,
+  DEFAULT_LOCALE,
+  useTranslations,
+  localizedPath,
+  type Locale,
+} from '../../i18n/ui';
+
+// Two-segment routes:
+//   /<category>/<slug>      → English article
+//   /<locale>/<category>    → localized category list
+//   /<locale>/categories    → localized "all topics" page
+export const getStaticPaths = (async () => {
+  const paths: any[] = [];
+  const nonDefault = LOCALES.filter((l) => l !== DEFAULT_LOCALE);
+
+  // English articles
+  const enArticles = await getPublishedArticles(DEFAULT_LOCALE);
+  for (const article of enArticles) {
+    paths.push({
+      params: { seg: article.data.category, sub: articleSlug(article) },
+      props: { kind: 'article', lang: DEFAULT_LOCALE, article },
+    });
+  }
+
+  // Localized category lists + topics page
+  for (const loc of nonDefault) {
+    paths.push({
+      params: { seg: loc, sub: 'categories' },
+      props: { kind: 'topics', lang: loc },
+    });
+    for (const cat of CATEGORIES) {
+      paths.push({
+        params: { seg: loc, sub: cat.slug },
+        props: { kind: 'category', lang: loc, categorySlug: cat.slug },
+      });
+    }
+  }
+  return paths;
+}) satisfies GetStaticPaths;
+
+interface Props {
+  kind: 'article' | 'category' | 'topics';
+  lang: Locale;
+  article?: Article;
+  categorySlug?: string;
+}
+const { kind, lang, article, categorySlug } = Astro.props as Props;
+const t = useTranslations(lang);
+
+let localePaths: Partial<Record<Locale, string>> | undefined;
+let title: string | undefined;
+let description: string | undefined;
+let cat = categorySlug ? localizedCategory(categorySlug, lang) : undefined;
+
+if (kind === 'article' && article) {
+  const translations = await getArticleTranslations(article);
+  // Switch to the translated article if it exists, else the localized category.
+  localePaths = {};
+  for (const loc of LOCALES) {
+    localePaths[loc] =
+      translations[loc] ?? localizedPath(loc, article.data.category);
+  }
+  title = article.data.title;
+  description = article.data.description;
+} else if (kind === 'category' && cat) {
+  title = `${cat.name} — Tutorials & Guides`;
+  description = cat.description;
+} else if (kind === 'topics') {
+  title = t('nav.allTopics');
+  description = undefined;
+}
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  article={kind === 'article'}
+  publishedTime={kind === 'article' ? article!.data.pubDate.toISOString() : undefined}
+  modifiedTime={kind === 'article'
+    ? (article!.data.updatedDate ?? article!.data.pubDate).toISOString()
+    : undefined}
+  localePaths={localePaths}
+>
+  {kind === 'article' && <ArticleView article={article!} lang={lang} />}
+  {kind === 'category' && <CategoryView lang={lang} categorySlug={categorySlug!} />}
+  {
+    kind === 'topics' && (
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <Breadcrumbs
+          crumbs={[
+            { label: t('nav.home'), href: localizedPath(lang, '') },
+            { label: t('nav.allTopics'), href: localizedPath(lang, 'categories') },
+          ]}
+        />
+        <h1 class="mt-5 font-display text-4xl font-bold tracking-tight text-fg">
+          {t('nav.allTopics')}
+        </h1>
+        <p class="mt-2 max-w-2xl text-muted">{t('section.exploreSub')}</p>
+        <div class="mt-8">
+          <CategoryGrid lang={lang} />
+        </div>
+      </div>
+    )
+  }
+</BaseLayout>

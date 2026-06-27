@@ -1,0 +1,12 @@
+# Netlify deploy config. The Astro app lives in the zyrolin/ subfolder.
+# For Vercel: set Root Directory = "zyrolin" (framework auto-detected as Astro).
+# For Cloudflare Pages: Build command = "npm run build", Output = "zyrolin/dist",
+# Root directory = "zyrolin".
+
+[build]
+  base = "zyrolin"
+  command = "npm run build"
+  publish = "zyrolin/dist"
+
+[build.environment]
+  NODE_VERSION = "22"

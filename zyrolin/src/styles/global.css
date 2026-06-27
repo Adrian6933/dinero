@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Zyrolin design system — dark-first, elegant, editorial.
+   Colors are driven by semantic CSS variables (--c-*) that flip with
+   [data-theme]. Tailwind theme tokens reference them so utilities like
+   bg-surface / text-fg / border-line switch automatically with the theme.
+   ───────────────────────────────────────────────────────────────────────── */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui,
+    sans-serif;
+
+  --color-bg: var(--c-bg);
+  --color-bg-soft: var(--c-bg-soft);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-line: var(--c-line);
+  --color-fg: var(--c-fg);
+  --color-fg-soft: var(--c-fg-soft);
+  --color-muted: var(--c-muted);
+  --color-brand: var(--c-brand);
+  --color-brand-2: var(--c-brand-2);
+  --color-gold: var(--c-gold);
+
+  --radius-card: 1rem;
+}
+
+/* Dark theme (default) */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --c-bg: #08090d;
+  --c-bg-soft: #0d0f15;
+  --c-surface: #111320;
+  --c-surface-2: #181b29;
+  --c-line: #262a3a;
+  --c-fg: #f4f5f9;
+  --c-fg-soft: #c8ccda;
+  --c-muted: #8b90a4;
+  --c-brand: #9387ff;
+  --c-brand-2: #c0a9ff;
+  --c-gold: #e0bd76;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --c-bg: #ffffff;
+  --c-bg-soft: #f6f7fa;
+  --c-surface: #ffffff;
+  --c-surface-2: #f1f3f8;
+  --c-line: #e5e8f0;
+  --c-fg: #0e1016;
+  --c-fg-soft: #353a48;
+  --c-muted: #6a7286;
+  --c-brand: #5a4be2;
+  --c-brand-2: #7d5cf0;
+  --c-gold: #b07d22;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-fg);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ambient luxury glow behind everything (subtle). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    65% 55% at 50% -12%,
+    color-mix(in oklab, var(--c-brand) 22%, transparent),
+    transparent 70%
+  );
+  opacity: 0.8;
+}
+:root[data-theme="light"] body::before {
+  opacity: 0.45;
+  background: radial-gradient(
+    60% 45% at 50% -12%,
+    color-mix(in oklab, var(--c-brand) 12%, transparent),
+    transparent 70%
+  );
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Anchored headings shouldn't hide under the sticky header. */
+:is(h2, h3, h4)[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* Gradient text helper for hero accents. */
+.text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--color-brand),
+    var(--color-brand-2) 55%,
+    var(--color-gold)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Thin elegant divider. */
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-line),
+    transparent
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Theme toggle icon visibility (sun in dark = "switch to light", moon in light)
+   ───────────────────────────────────────────────────────────────────────── */
+.theme-icon-light {
+  display: none;
+}
+:root[data-theme="light"] .theme-icon-dark {
+  display: none;
+}
+:root[data-theme="light"] .theme-icon-light {
+  display: inline-flex;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Article prose styling (.prose-zyrolin). Themed via tokens.
+   ───────────────────────────────────────────────────────────────────────── */
+.prose-zyrolin {
+  color: var(--color-fg-soft);
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+
+.prose-zyrolin > * + * {
+  margin-top: 1.25rem;
+}
+
+.prose-zyrolin h2 {
+  font-family: var(--font-display);
+  margin-top: 2.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--color-fg);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.prose-zyrolin h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+.prose-zyrolin p {
+  margin-top: 1rem;
+}
+
+.prose-zyrolin a {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s;
+}
+.prose-zyrolin a:hover {
+  color: var(--color-brand-2);
+}
+
+.prose-zyrolin ul,
+.prose-zyrolin ol {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+.prose-zyrolin ul {
+  list-style: disc;
+}
+.prose-zyrolin ol {
+  list-style: decimal;
+}
+.prose-zyrolin li {
+  margin-top: 0.5rem;
+}
+.prose-zyrolin li::marker {
+  color: var(--color-brand);
+}
+
+.prose-zyrolin img {
+  border-radius: var(--radius-card);
+  margin: 1.5rem 0;
+}
+
+.prose-zyrolin blockquote {
+  border-left: 3px solid var(--color-brand);
+  background: color-mix(in oklab, var(--color-brand) 8%, var(--color-surface));
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.5rem;
+  color: var(--color-fg-soft);
+}
+
+.prose-zyrolin code {
+  background: var(--color-surface-2);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.35rem;
+  font-size: 0.9em;
+  color: var(--color-brand-2);
+}
+
+.prose-zyrolin pre {
+  background: #0a0b10;
+  color: #e2e8f0;
+  padding: 1.25rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-line);
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+.prose-zyrolin pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.prose-zyrolin table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  overflow: hidden;
+  border-radius: 0.6rem;
+}
+.prose-zyrolin th,
+.prose-zyrolin td {
+  border: 1px solid var(--color-line);
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+}
+.prose-zyrolin th {
+  background: var(--color-surface-2);
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+/* Respect reduced motion: disable non-essential animation/transition. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

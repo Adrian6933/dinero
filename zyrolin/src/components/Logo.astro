@@ -1,0 +1,45 @@
+---
+// Brand logo: a refined gradient emblem with a clean monogram and a small gold
+// accent, plus the wordmark. Uses theme CSS variables so it adapts to the theme.
+interface Props {
+  size?: number;
+  showWord?: boolean;
+}
+const { size = 36, showWord = true } = Astro.props;
+const id = 'lg-' + Math.random().toString(36).slice(2, 8);
+---
+
+<span class="flex items-center gap-2.5">
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 40 40"
+    fill="none"
+    aria-hidden="true"
+    class="shrink-0"
+  >
+    <defs>
+      <linearGradient id={id} x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+        <stop stop-color="var(--color-brand)"></stop>
+        <stop offset="1" stop-color="var(--color-brand-2)"></stop>
+      </linearGradient>
+    </defs>
+    <rect x="2" y="2" width="36" height="36" rx="11" fill={`url(#${id})`}></rect>
+    <rect x="2" y="2" width="36" height="36" rx="11" fill="#fff" opacity="0.08"></rect>
+    <path
+      d="M13.5 14.5 H26.5 L13.5 25.5 H26.5"
+      stroke="#fff"
+      stroke-width="3.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></path>
+    <circle cx="30" cy="10.5" r="2.1" fill="var(--color-gold)"></circle>
+  </svg>
+  {
+    showWord && (
+      <span class="font-display text-xl font-bold tracking-tight text-fg">
+        Zyrolin
+      </span>
+    )
+  }
+</span>

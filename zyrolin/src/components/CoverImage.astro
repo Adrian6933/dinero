@@ -1,0 +1,69 @@
+---
+import CoverArt from './CoverArt.astro';
+import { categoryIcon } from '../data/categories';
+import { categoryCoverUrl } from '../data/covers';
+
+// Renders a real thematic cover photo (from Unsplash) with the generated
+// gradient illustration behind it as a graceful fallback: if the photo fails to
+// load, `onerror` removes the <img> and the elegant illustration shows instead.
+interface Props {
+  category: string;
+  slug: string;
+  accent: string;
+  name?: string;
+  ratio?: string;
+  big?: boolean;
+  width?: number;
+  class?: string;
+}
+const {
+  category,
+  slug,
+  accent,
+  name,
+  ratio = '16 / 9',
+  big = false,
+  width = 800,
+  class: cls = '',
+} = Astro.props;
+
+const icon = categoryIcon(category);
+const url = categoryCoverUrl(category, slug, width);
+
+// Explicit intrinsic dimensions (from the aspect ratio) to prevent layout shift.
+const [rw, rh] = ratio.split('/').map((s) => parseFloat(s.trim()));
+const imgHeight = Math.round((width * rh) / rw);
+---
+
+<div
+  class:list={['relative w-full overflow-hidden bg-surface', cls]}
+  style={`aspect-ratio:${ratio}`}
+>
+  <CoverArt
+    accent={accent}
+    icon={icon}
+    label={name}
+    ratio={ratio}
+    big={big}
+    class="absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-105"
+  />
+  {
+    url && (
+      <img
+        src={url}
+        alt={name ? `${name} cover` : 'cover'}
+        width={width}
+        height={imgHeight}
+        loading="lazy"
+        decoding="async"
+        class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        onerror="this.remove()"
+      />
+    )
+  }
+  <!-- Soft top scrim keeps the category badge legible over bright photos -->
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/35 to-transparent"
+  >
+  </div>
+</div>
