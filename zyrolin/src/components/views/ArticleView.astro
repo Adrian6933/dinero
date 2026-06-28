@@ -335,6 +335,26 @@ const faqJsonLd =
       wrap.appendChild(table);
     });
 
+    // Turn "Step 1:" / "Paso 1:" / "Schritt 1:" / "Étape 1:" headings into
+    // numbered badges for clear how-to structure.
+    const STEP_RE = /^\s*(?:step|paso|schritt|étape|etape)\s+(\d+)\b[\s:.)\-–]*/i;
+    prose.querySelectorAll('h2').forEach((h2) => {
+      const m = (h2.textContent || '').match(STEP_RE);
+      if (!m) return;
+      h2.classList.add('is-step');
+      for (const node of h2.childNodes) {
+        if (node.nodeType === 3 && node.nodeValue.trim()) {
+          node.nodeValue = node.nodeValue.replace(STEP_RE, '');
+          break;
+        }
+      }
+      const badge = document.createElement('span');
+      badge.className = 'step-num';
+      badge.textContent = m[1];
+      badge.setAttribute('aria-hidden', 'true');
+      h2.insertBefore(badge, h2.firstChild);
+    });
+
     // Drop a contextual photo into the body to break up long articles.
     const imgUrl = prose.getAttribute('data-inline-img');
     const heads = prose.querySelectorAll('h2');

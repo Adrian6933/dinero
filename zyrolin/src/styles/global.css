@@ -185,6 +185,32 @@ body::before {
   );
 }
 
+/* Numbered step headings (set by the enhancement script). */
+.prose-zyrolin h2.is-step {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.prose-zyrolin h2.is-step::before {
+  display: none;
+}
+.prose-zyrolin .step-num {
+  flex-shrink: 0;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--accent) 16%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 45%, transparent);
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
 .prose-zyrolin h3 {
   margin-top: 1.75rem;
   margin-bottom: 0.25rem;
