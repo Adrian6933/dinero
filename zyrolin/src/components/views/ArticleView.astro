@@ -215,7 +215,7 @@ const faqJsonLd =
         )
       }
 
-      <div class="prose-zyrolin mt-7 max-w-none">
+      <div class="prose-zyrolin mt-7 max-w-none" style={`--accent:${accent}`}>
         <Content />
       </div>
 
@@ -284,4 +284,38 @@ const faqJsonLd =
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
   }
+
+  // Progressive enhancement for article prose:
+  //  - Tag blockquotes that start with a bold keyword (Tip/Note/Warning in
+  //    EN/ES/DE/FR) so they render as colored callout cards.
+  //  - Wrap wide tables in a scrollable container.
+  (() => {
+    const prose = document.querySelector('.prose-zyrolin');
+    if (!prose) return;
+
+    const TYPES = {
+      tip: ['tip', 'tips', 'pro tip', 'consejo', 'consejos', 'truco', 'tipp', 'astuce', 'conseil'],
+      warning: ['warning', 'caution', 'aviso', 'advertencia', 'cuidado', 'ojo', 'warnung', 'achtung', 'avertissement', 'attention'],
+      info: ['note', 'info', 'important', 'nota', 'importante', 'hinweis', 'wichtig', 'remarque'],
+    };
+    prose.querySelectorAll('blockquote').forEach((bq) => {
+      const strong = bq.querySelector('strong, b');
+      if (!strong) return;
+      const label = (strong.textContent || '').trim().replace(/[:：].*$/, '').toLowerCase();
+      for (const [type, keys] of Object.entries(TYPES)) {
+        if (keys.some((k) => label === k || label.startsWith(k + ' '))) {
+          bq.setAttribute('data-callout', type);
+          break;
+        }
+      }
+    });
+
+    prose.querySelectorAll('table').forEach((table) => {
+      if (table.parentElement && table.parentElement.classList.contains('table-wrap')) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      table.parentNode.insertBefore(wrap, table);
+      wrap.appendChild(table);
+    });
+  })();
 </script>
