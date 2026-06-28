@@ -18,6 +18,7 @@ stats:
 chart:
   title: "La répartition 50/30/20"
   unit: "%"
+  style: "donut"
   data:
     - { label: "Besoins", value: 50 }
     - { label: "Envies", value: 30 }

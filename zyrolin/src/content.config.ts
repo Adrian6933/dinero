@@ -39,11 +39,12 @@ const articles = defineCollection({
       stats: z
         .array(z.object({ value: z.string(), label: z.string() }))
         .optional(),
-      // A simple bar chart rendered from data.
+      // A chart rendered from data — bars (default) or a donut for share/splits.
       chart: z
         .object({
           title: z.string().optional(),
           unit: z.string().default(''),
+          style: z.enum(['bar', 'donut']).default('bar'),
           data: z.array(z.object({ label: z.string(), value: z.number() })),
         })
         .optional(),

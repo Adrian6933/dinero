@@ -18,6 +18,7 @@ stats:
 chart:
   title: "El reparto 50/30/20"
   unit: "%"
+  style: "donut"
   data:
     - { label: "Necesidades", value: 50 }
     - { label: "Deseos", value: 30 }

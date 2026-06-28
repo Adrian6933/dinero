@@ -10,6 +10,7 @@ import CoverImage from '../CoverImage.astro';
 import KeyTakeaways from '../article/KeyTakeaways.astro';
 import StatRow from '../article/StatRow.astro';
 import BarChart from '../article/BarChart.astro';
+import DonutChart from '../article/DonutChart.astro';
 import { categoryIcon } from '../../data/categories';
 import { localizedCategory } from '../../i18n/categories';
 import { SITE } from '../../data/site';
@@ -220,14 +221,22 @@ const faqJsonLd =
       </div>
 
       {
-        article.data.chart && (
-          <BarChart
-            title={article.data.chart.title}
-            unit={article.data.chart.unit}
-            data={article.data.chart.data}
-            accent={accent}
-          />
-        )
+        article.data.chart &&
+          (article.data.chart.style === 'donut' ? (
+            <DonutChart
+              title={article.data.chart.title}
+              unit={article.data.chart.unit}
+              data={article.data.chart.data}
+              accent={accent}
+            />
+          ) : (
+            <BarChart
+              title={article.data.chart.title}
+              unit={article.data.chart.unit}
+              data={article.data.chart.data}
+              accent={accent}
+            />
+          ))
       }
 
       {

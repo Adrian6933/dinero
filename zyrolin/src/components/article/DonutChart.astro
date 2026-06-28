@@ -1,0 +1,69 @@
+---
+import Icon from '../Icon.astro';
+
+// A donut chart for share/split data (e.g. 50/30/20). Pure CSS conic-gradient,
+// no JS. Slice colors are shades of the category accent so it stays cohesive.
+interface Props {
+  title?: string;
+  unit?: string;
+  data: { label: string; value: number }[];
+  accent?: string;
+}
+const { title, unit = '', data, accent = 'var(--color-brand)' } = Astro.props;
+
+const total = data.reduce((s, d) => s + d.value, 0) || 1;
+const step = data.length > 1 ? 55 / (data.length - 1) : 0;
+let acc = 0;
+const slices = data.map((d, i) => {
+  const start = (acc / total) * 360;
+  acc += d.value;
+  const end = (acc / total) * 360;
+  const color = `color-mix(in oklab, ${accent}, #ffffff ${Math.round(i * step)}%)`;
+  return { ...d, start, end, color, pct: Math.round((d.value / total) * 100) };
+});
+const gradient = slices
+  .map((s) => `${s.color} ${s.start}deg ${s.end}deg`)
+  .join(', ');
+---
+
+<figure
+  class="my-7 rounded-[var(--radius-card)] border border-line bg-surface p-5"
+>
+  {
+    title && (
+      <figcaption class="mb-4 flex items-center gap-2 font-display font-bold text-fg">
+        <Icon name="bar-chart" size={18} class="text-brand" />
+        {title}
+      </figcaption>
+    )
+  }
+  <div class="flex flex-wrap items-center gap-6">
+    <div
+      class="relative shrink-0"
+      style={`width:150px;height:150px;border-radius:50%;background:conic-gradient(${gradient});-webkit-mask:radial-gradient(farthest-side,transparent 58%,#000 59%);mask:radial-gradient(farthest-side,transparent 58%,#000 59%)`}
+      role="img"
+      aria-label={title ?? 'Chart'}
+    >
+    </div>
+    <ul class="min-w-[160px] flex-1 space-y-2.5">
+      {
+        slices.map((s) => (
+          <li class="flex items-center gap-2.5 text-sm">
+            <span
+              class="inline-block h-3 w-3 shrink-0 rounded-[3px]"
+              style={`background:${s.color}`}
+            />
+            <span class="text-fg-soft">{s.label}</span>
+            <span
+              class="ml-auto font-semibold text-fg"
+              style="font-variant-numeric: tabular-nums"
+            >
+              {s.value}
+              {unit}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</figure>

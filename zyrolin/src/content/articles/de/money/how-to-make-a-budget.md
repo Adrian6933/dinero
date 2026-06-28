@@ -18,6 +18,7 @@ stats:
 chart:
   title: "Die 50/30/20-Aufteilung"
   unit: "%"
+  style: "donut"
   data:
     - { label: "Bedürfnisse", value: 50 }
     - { label: "Wünsche", value: 30 }

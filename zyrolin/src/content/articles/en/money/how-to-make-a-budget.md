@@ -18,6 +18,7 @@ stats:
 chart:
   title: "The 50/30/20 split"
   unit: "%"
+  style: "donut"
   data:
     - { label: "Needs", value: 50 }
     - { label: "Wants", value: 30 }
