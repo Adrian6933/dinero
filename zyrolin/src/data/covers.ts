@@ -80,3 +80,19 @@ export function categoryCoverUrl(
   const id = pool[hash(articleSlug) % pool.length];
   return unsplashUrl(id, width);
 }
+
+/**
+ * A second photo for the article body (different from the cover when possible),
+ * used to break up long text. Returns undefined if the category has no pool.
+ */
+export function secondaryPhotoUrl(
+  categorySlug: string,
+  articleSlug: string,
+  width = 1000,
+): string | undefined {
+  const pool = CATEGORY_PHOTOS[categorySlug];
+  if (!pool || pool.length === 0) return undefined;
+  // Offset by one from the cover's pick so the two images differ.
+  const id = pool[(hash(articleSlug) + 1) % pool.length];
+  return unsplashUrl(id, width);
+}

@@ -245,6 +245,25 @@ body::before {
   color: var(--color-muted);
 }
 
+/* Contextual photo inserted mid-article to break up the text. */
+.prose-zyrolin .inline-photo {
+  margin: 2rem 0;
+}
+.prose-zyrolin .inline-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 11 / 6.2;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Editorial lead: the opening paragraph stands out a little. */
+.prose-zyrolin > p:first-of-type {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: var(--color-fg);
+}
+
 .prose-zyrolin blockquote {
   border-left: 4px solid var(--accent);
   background: color-mix(in oklab, var(--accent) 8%, var(--color-surface));

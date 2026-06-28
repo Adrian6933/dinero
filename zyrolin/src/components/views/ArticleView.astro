@@ -14,7 +14,7 @@ import DonutChart from '../article/DonutChart.astro';
 import { categoryIcon } from '../../data/categories';
 import { localizedCategory } from '../../i18n/categories';
 import { SITE } from '../../data/site';
-import { categoryCoverUrl } from '../../data/covers';
+import { categoryCoverUrl, secondaryPhotoUrl } from '../../data/covers';
 import {
   articleSlug,
   readingTime,
@@ -37,6 +37,9 @@ const icon = categoryIcon(article.data.category);
 const { Content, headings } = await render(article);
 const minutes = readingTime(article);
 const related = await getRelatedArticles(article);
+const inlineImg = article.data.cover
+  ? undefined
+  : secondaryPhotoUrl(article.data.category, articleSlug(article), 1100);
 
 // Article structured data (JSON-LD) for richer search results.
 const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
@@ -216,7 +219,12 @@ const faqJsonLd =
         )
       }
 
-      <div class="prose-zyrolin mt-7 max-w-none" style={`--accent:${accent}`}>
+      <div
+        class="prose-zyrolin mt-7 max-w-none"
+        style={`--accent:${accent}`}
+        data-inline-img={inlineImg}
+        data-inline-alt={`${category.name}: ${article.data.title}`}
+      >
         <Content />
       </div>
 
@@ -326,5 +334,24 @@ const faqJsonLd =
       table.parentNode.insertBefore(wrap, table);
       wrap.appendChild(table);
     });
+
+    // Drop a contextual photo into the body to break up long articles.
+    const imgUrl = prose.getAttribute('data-inline-img');
+    const heads = prose.querySelectorAll('h2');
+    if (imgUrl && heads.length >= 3) {
+      const target = heads[Math.floor(heads.length / 2)];
+      const fig = document.createElement('figure');
+      fig.className = 'inline-photo';
+      const img = document.createElement('img');
+      img.src = imgUrl;
+      img.alt = prose.getAttribute('data-inline-alt') || '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.width = 1100;
+      img.height = 620;
+      img.onerror = () => fig.remove();
+      fig.appendChild(img);
+      target.parentNode.insertBefore(fig, target);
+    }
   })();
 </script>
